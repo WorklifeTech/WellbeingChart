@@ -1,0 +1,22 @@
+{
+  "name": "WellbeingChart",
+  "version": "0.1.0",
+  "summary": "A short description of WellbeingChart.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/radohecko/WellbeingChart",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "radohecko": "radoslavhecko@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/radohecko/WellbeingChart.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "WellbeingChart/Classes/**/*"
+}

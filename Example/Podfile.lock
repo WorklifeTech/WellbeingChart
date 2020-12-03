@@ -1,0 +1,16 @@
+PODS:
+  - WellbeingChart (0.1.0)
+
+DEPENDENCIES:
+  - WellbeingChart (from `../`)
+
+EXTERNAL SOURCES:
+  WellbeingChart:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WellbeingChart: d01fdaf1237008104787627b7626c01493b6adfc
+
+PODFILE CHECKSUM: 15b290320da08ae49b60583c49f3b3b39f5db23e
+
+COCOAPODS: 1.9.3

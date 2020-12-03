@@ -1,0 +1,6 @@
+framework module WellbeingChart {
+  umbrella header "WellbeingChart-umbrella.h"
+
+  export *
+  module * { export * }
+}

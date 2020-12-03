@@ -1,0 +1,6 @@
+framework module Pods_WellbeingChart_Tests {
+  umbrella header "Pods-WellbeingChart_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

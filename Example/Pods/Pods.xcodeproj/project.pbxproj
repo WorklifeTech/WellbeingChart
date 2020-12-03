@@ -1,0 +1,778 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04A264077BC8F6C02C4B27C8104CDDFE /* Pods-WellbeingChart_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B7F7B0F1329CDEC8E84FC424BC0D249 /* Pods-WellbeingChart_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07F4496D026E5607F2DDA0F85E00133B /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC176C4B17FBA1C31F37B9911C9AF9 /* ReplaceMe.swift */; };
+		3FB6F4A33D52051048089445F0465F61 /* Pods-WellbeingChart_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CCAECD16ABEAF792EC318360FC8154 /* Pods-WellbeingChart_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43D2224744DC8BF3C22CFC89D4451639 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		7D783BF5E48155668E5B5D7980CB54D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		895B2824A95ACF02585143414A529C85 /* WellbeingChart-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D8D503D2234766B296D4479D454456 /* WellbeingChart-dummy.m */; };
+		92D29AD4969F986202FF8387A045B339 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		9BE528263BE4B00A88119C104B4376C2 /* WellbeingChart-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 854133064D2442B875A3A4A1B586AA5E /* WellbeingChart-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF6B0CCB9E1E2FAE3B57E445C09BD70F /* Pods-WellbeingChart_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1075E213FEB058FF88A5B38AF13BB212 /* Pods-WellbeingChart_Tests-dummy.m */; };
+		DEFC6E60093036234BA75EEF0D0714EB /* Pods-WellbeingChart_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35162BCAA32F6793C5B63558D07D8543 /* Pods-WellbeingChart_Example-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC7609D63F04D866A9D89E232432EF92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2E554D33719165516ACDB3D4C443418;
+			remoteInfo = WellbeingChart;
+		};
+		EA600AE7002F5195D72341B3E2FBF040 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35B908E089B95D52DDFBD4B4099EBFCD;
+			remoteInfo = "Pods-WellbeingChart_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0438D2D5290317D08B2271FA3A5C55B8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		081B77FBB0B25C460D534BA8829FBE6B /* WellbeingChart.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WellbeingChart.modulemap; sourceTree = "<group>"; };
+		0B2A58FACE86F3E1BA4BDCF045EF40C4 /* Pods-WellbeingChart_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WellbeingChart_Example.release.xcconfig"; sourceTree = "<group>"; };
+		1075E213FEB058FF88A5B38AF13BB212 /* Pods-WellbeingChart_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WellbeingChart_Tests-dummy.m"; sourceTree = "<group>"; };
+		13DBE170B1493AA42055263A7C8F7E90 /* WellbeingChart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WellbeingChart.debug.xcconfig; sourceTree = "<group>"; };
+		1B27175951978C0E58C8625CFB65BF7D /* Pods-WellbeingChart_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WellbeingChart_Tests-Info.plist"; sourceTree = "<group>"; };
+		29A93B7847C2B53D18E2EBA8FB4ECE71 /* Pods-WellbeingChart_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WellbeingChart_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		2A3BC7FAA0D8C1C79E5A47B2272E93CE /* Pods-WellbeingChart_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WellbeingChart_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		35162BCAA32F6793C5B63558D07D8543 /* Pods-WellbeingChart_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WellbeingChart_Example-dummy.m"; sourceTree = "<group>"; };
+		58FB551C5AF84FFFF9761AD71BEC6640 /* Pods_WellbeingChart_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WellbeingChart_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D8511935BD1B4B488DA85BE7AF72CEF /* Pods-WellbeingChart_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WellbeingChart_Example-Info.plist"; sourceTree = "<group>"; };
+		73F0B51881F4D345043A93B969B81EF4 /* Pods-WellbeingChart_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WellbeingChart_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		84CCAECD16ABEAF792EC318360FC8154 /* Pods-WellbeingChart_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WellbeingChart_Tests-umbrella.h"; sourceTree = "<group>"; };
+		854133064D2442B875A3A4A1B586AA5E /* WellbeingChart-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WellbeingChart-umbrella.h"; sourceTree = "<group>"; };
+		8B7F7B0F1329CDEC8E84FC424BC0D249 /* Pods-WellbeingChart_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WellbeingChart_Example-umbrella.h"; sourceTree = "<group>"; };
+		93E0A47B4F67F57252B6CF6C535CA6ED /* Pods-WellbeingChart_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WellbeingChart_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9B9AA7BC85EB7FB9D85B4A202A4D0C19 /* WellbeingChart.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = WellbeingChart.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3DFA64AF45A91488A1B9DA43F04ABF5 /* WellbeingChart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WellbeingChart.release.xcconfig; sourceTree = "<group>"; };
+		A873F0C40F2401FF35C93F354D67B97D /* Pods-WellbeingChart_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WellbeingChart_Example.modulemap"; sourceTree = "<group>"; };
+		ADD225A881E024C7D5C360A9527AD6B6 /* Pods_WellbeingChart_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WellbeingChart_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6D8D503D2234766B296D4479D454456 /* WellbeingChart-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WellbeingChart-dummy.m"; sourceTree = "<group>"; };
+		D4DB291BA3B4E571DB91B5A42FC2F655 /* Pods-WellbeingChart_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WellbeingChart_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		D7681809CAAF1827510C7E93FD4D2DB4 /* WellbeingChart-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WellbeingChart-Info.plist"; sourceTree = "<group>"; };
+		D9C2236DC6D36F1BCB3F39A709926754 /* Pods-WellbeingChart_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WellbeingChart_Tests.modulemap"; sourceTree = "<group>"; };
+		DAA0C0E19035A97ED1C28A8897D812B5 /* Pods-WellbeingChart_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WellbeingChart_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		DFC767CEE90D630EA59EFFBC003EDD93 /* Pods-WellbeingChart_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WellbeingChart_Example-frameworks.sh"; sourceTree = "<group>"; };
+		E04CEDF2F75C0F9130C00B534873CE53 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		E4A301174CAB8331C862003F2B5ABC79 /* Pods-WellbeingChart_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WellbeingChart_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F5090C85E13ADF9AFF44D919173D59C9 /* WellbeingChart-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WellbeingChart-prefix.pch"; sourceTree = "<group>"; };
+		F73619AEF526B73FE2ABE951BEDF52AC /* WellbeingChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WellbeingChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFBC176C4B17FBA1C31F37B9911C9AF9 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = WellbeingChart/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32D1F98BC1EF546B9F4CC1372726D6B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92D29AD4969F986202FF8387A045B339 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5890A31578BA6101ECBFF0201DEB3915 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D783BF5E48155668E5B5D7980CB54D6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C40692FB6DEB8F63E47F7D42DBE6D3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D2224744DC8BF3C22CFC89D4451639 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00CE5614B62EA6299E632C32D4FE0D97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58FB551C5AF84FFFF9761AD71BEC6640 /* Pods_WellbeingChart_Example.framework */,
+				ADD225A881E024C7D5C360A9527AD6B6 /* Pods_WellbeingChart_Tests.framework */,
+				F73619AEF526B73FE2ABE951BEDF52AC /* WellbeingChart.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		178B0DFE8F30681DBE306E1F5C784549 /* Pods-WellbeingChart_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D9C2236DC6D36F1BCB3F39A709926754 /* Pods-WellbeingChart_Tests.modulemap */,
+				93E0A47B4F67F57252B6CF6C535CA6ED /* Pods-WellbeingChart_Tests-acknowledgements.markdown */,
+				E4A301174CAB8331C862003F2B5ABC79 /* Pods-WellbeingChart_Tests-acknowledgements.plist */,
+				1075E213FEB058FF88A5B38AF13BB212 /* Pods-WellbeingChart_Tests-dummy.m */,
+				1B27175951978C0E58C8625CFB65BF7D /* Pods-WellbeingChart_Tests-Info.plist */,
+				84CCAECD16ABEAF792EC318360FC8154 /* Pods-WellbeingChart_Tests-umbrella.h */,
+				73F0B51881F4D345043A93B969B81EF4 /* Pods-WellbeingChart_Tests.debug.xcconfig */,
+				DAA0C0E19035A97ED1C28A8897D812B5 /* Pods-WellbeingChart_Tests.release.xcconfig */,
+			);
+			name = "Pods-WellbeingChart_Tests";
+			path = "Target Support Files/Pods-WellbeingChart_Tests";
+			sourceTree = "<group>";
+		};
+		30366C58A920D62233B32CB501C1727A /* Pods-WellbeingChart_Example */ = {
+			isa = PBXGroup;
+			children = (
+				A873F0C40F2401FF35C93F354D67B97D /* Pods-WellbeingChart_Example.modulemap */,
+				2A3BC7FAA0D8C1C79E5A47B2272E93CE /* Pods-WellbeingChart_Example-acknowledgements.markdown */,
+				D4DB291BA3B4E571DB91B5A42FC2F655 /* Pods-WellbeingChart_Example-acknowledgements.plist */,
+				35162BCAA32F6793C5B63558D07D8543 /* Pods-WellbeingChart_Example-dummy.m */,
+				DFC767CEE90D630EA59EFFBC003EDD93 /* Pods-WellbeingChart_Example-frameworks.sh */,
+				6D8511935BD1B4B488DA85BE7AF72CEF /* Pods-WellbeingChart_Example-Info.plist */,
+				8B7F7B0F1329CDEC8E84FC424BC0D249 /* Pods-WellbeingChart_Example-umbrella.h */,
+				29A93B7847C2B53D18E2EBA8FB4ECE71 /* Pods-WellbeingChart_Example.debug.xcconfig */,
+				0B2A58FACE86F3E1BA4BDCF045EF40C4 /* Pods-WellbeingChart_Example.release.xcconfig */,
+			);
+			name = "Pods-WellbeingChart_Example";
+			path = "Target Support Files/Pods-WellbeingChart_Example";
+			sourceTree = "<group>";
+		};
+		46AA7714DEAAE10D25F60870B710F269 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				30366C58A920D62233B32CB501C1727A /* Pods-WellbeingChart_Example */,
+				178B0DFE8F30681DBE306E1F5C784549 /* Pods-WellbeingChart_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5B65CB2A2621944069AAA25F2C2E7F2D /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				E04CEDF2F75C0F9130C00B534873CE53 /* LICENSE */,
+				0438D2D5290317D08B2271FA3A5C55B8 /* README.md */,
+				9B9AA7BC85EB7FB9D85B4A202A4D0C19 /* WellbeingChart.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		6AA7AE76EFB27DC934C8346437BE0373 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8029D07D35428055173C1DC72A90231F /* WellbeingChart */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		8029D07D35428055173C1DC72A90231F /* WellbeingChart */ = {
+			isa = PBXGroup;
+			children = (
+				FFBC176C4B17FBA1C31F37B9911C9AF9 /* ReplaceMe.swift */,
+				5B65CB2A2621944069AAA25F2C2E7F2D /* Pod */,
+				D939462A03D8F0CA846A152688DDA952 /* Support Files */,
+			);
+			name = WellbeingChart;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				6AA7AE76EFB27DC934C8346437BE0373 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				00CE5614B62EA6299E632C32D4FE0D97 /* Products */,
+				46AA7714DEAAE10D25F60870B710F269 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D939462A03D8F0CA846A152688DDA952 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				081B77FBB0B25C460D534BA8829FBE6B /* WellbeingChart.modulemap */,
+				C6D8D503D2234766B296D4479D454456 /* WellbeingChart-dummy.m */,
+				D7681809CAAF1827510C7E93FD4D2DB4 /* WellbeingChart-Info.plist */,
+				F5090C85E13ADF9AFF44D919173D59C9 /* WellbeingChart-prefix.pch */,
+				854133064D2442B875A3A4A1B586AA5E /* WellbeingChart-umbrella.h */,
+				13DBE170B1493AA42055263A7C8F7E90 /* WellbeingChart.debug.xcconfig */,
+				A3DFA64AF45A91488A1B9DA43F04ABF5 /* WellbeingChart.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/WellbeingChart";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		085F779639926C0C91C6E0A4F55F8B03 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BE528263BE4B00A88119C104B4376C2 /* WellbeingChart-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		366A7773E56E38AA048EF8EC209E4482 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04A264077BC8F6C02C4B27C8104CDDFE /* Pods-WellbeingChart_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF97E416EE6AE95EA6A51342C9C98901 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FB6F4A33D52051048089445F0465F61 /* Pods-WellbeingChart_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		09589B3D15BF6EEEBDF89AE803C99BB4 /* Pods-WellbeingChart_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A26B6D952F1EB150EDDEFEE65DA4DC5A /* Build configuration list for PBXNativeTarget "Pods-WellbeingChart_Tests" */;
+			buildPhases = (
+				FF97E416EE6AE95EA6A51342C9C98901 /* Headers */,
+				58EB6A07E129EDB75D06B730F3DA32CF /* Sources */,
+				5C40692FB6DEB8F63E47F7D42DBE6D3D /* Frameworks */,
+				E0FA5E75D156332D4106CB7E03807190 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42A4D699ECB68EEB9008D138F4F3A772 /* PBXTargetDependency */,
+			);
+			name = "Pods-WellbeingChart_Tests";
+			productName = "Pods-WellbeingChart_Tests";
+			productReference = ADD225A881E024C7D5C360A9527AD6B6 /* Pods_WellbeingChart_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		35B908E089B95D52DDFBD4B4099EBFCD /* Pods-WellbeingChart_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5E16178307C557D7915B8C02166002F /* Build configuration list for PBXNativeTarget "Pods-WellbeingChart_Example" */;
+			buildPhases = (
+				366A7773E56E38AA048EF8EC209E4482 /* Headers */,
+				5757D33B605304A0361381E56F6F980B /* Sources */,
+				5890A31578BA6101ECBFF0201DEB3915 /* Frameworks */,
+				97199E6F06BE86A4B0F4CE00F1058BC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5C99E49FE8C3E957AA2DB60737498D3 /* PBXTargetDependency */,
+			);
+			name = "Pods-WellbeingChart_Example";
+			productName = "Pods-WellbeingChart_Example";
+			productReference = 58FB551C5AF84FFFF9761AD71BEC6640 /* Pods_WellbeingChart_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C2E554D33719165516ACDB3D4C443418 /* WellbeingChart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05074687E8D9774C9837ABBEB66C6194 /* Build configuration list for PBXNativeTarget "WellbeingChart" */;
+			buildPhases = (
+				085F779639926C0C91C6E0A4F55F8B03 /* Headers */,
+				FF6C664942AE6FCDD9693D1BE208F566 /* Sources */,
+				32D1F98BC1EF546B9F4CC1372726D6B9 /* Frameworks */,
+				81FB5A08612110C889A6D2042AE60429 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WellbeingChart;
+			productName = WellbeingChart;
+			productReference = F73619AEF526B73FE2ABE951BEDF52AC /* WellbeingChart.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					C2E554D33719165516ACDB3D4C443418 = {
+						LastSwiftMigration = 1220;
+					};
+				};
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 00CE5614B62EA6299E632C32D4FE0D97 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				35B908E089B95D52DDFBD4B4099EBFCD /* Pods-WellbeingChart_Example */,
+				09589B3D15BF6EEEBDF89AE803C99BB4 /* Pods-WellbeingChart_Tests */,
+				C2E554D33719165516ACDB3D4C443418 /* WellbeingChart */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		81FB5A08612110C889A6D2042AE60429 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97199E6F06BE86A4B0F4CE00F1058BC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0FA5E75D156332D4106CB7E03807190 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5757D33B605304A0361381E56F6F980B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEFC6E60093036234BA75EEF0D0714EB /* Pods-WellbeingChart_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58EB6A07E129EDB75D06B730F3DA32CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF6B0CCB9E1E2FAE3B57E445C09BD70F /* Pods-WellbeingChart_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF6C664942AE6FCDD9693D1BE208F566 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07F4496D026E5607F2DDA0F85E00133B /* ReplaceMe.swift in Sources */,
+				895B2824A95ACF02585143414A529C85 /* WellbeingChart-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42A4D699ECB68EEB9008D138F4F3A772 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-WellbeingChart_Example";
+			target = 35B908E089B95D52DDFBD4B4099EBFCD /* Pods-WellbeingChart_Example */;
+			targetProxy = EA600AE7002F5195D72341B3E2FBF040 /* PBXContainerItemProxy */;
+		};
+		D5C99E49FE8C3E957AA2DB60737498D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WellbeingChart;
+			target = C2E554D33719165516ACDB3D4C443418 /* WellbeingChart */;
+			targetProxy = AC7609D63F04D866A9D89E232432EF92 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1A250C893BD33CFD3ED2D6288C8F739B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B2A58FACE86F3E1BA4BDCF045EF40C4 /* Pods-WellbeingChart_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WellbeingChart_Example/Pods-WellbeingChart_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WellbeingChart_Example/Pods-WellbeingChart_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3C839C5853AF0585202D1C7938E1EBF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29A93B7847C2B53D18E2EBA8FB4ECE71 /* Pods-WellbeingChart_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WellbeingChart_Example/Pods-WellbeingChart_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WellbeingChart_Example/Pods-WellbeingChart_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6E018F484EECCC2AF904EF0AD0DB9FDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3DFA64AF45A91488A1B9DA43F04ABF5 /* WellbeingChart.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WellbeingChart/WellbeingChart-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WellbeingChart/WellbeingChart-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WellbeingChart/WellbeingChart.modulemap";
+				PRODUCT_MODULE_NAME = WellbeingChart;
+				PRODUCT_NAME = WellbeingChart;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		916E0404255105F480DC4950B7625F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		C0E305662414B8051255DFA130857430 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13DBE170B1493AA42055263A7C8F7E90 /* WellbeingChart.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WellbeingChart/WellbeingChart-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WellbeingChart/WellbeingChart-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WellbeingChart/WellbeingChart.modulemap";
+				PRODUCT_MODULE_NAME = WellbeingChart;
+				PRODUCT_NAME = WellbeingChart;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E7B5EB0650419B34AED7BA65AB6BE3AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAA0C0E19035A97ED1C28A8897D812B5 /* Pods-WellbeingChart_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WellbeingChart_Tests/Pods-WellbeingChart_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WellbeingChart_Tests/Pods-WellbeingChart_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F40B74CAE718E8D5B666A4E4D4EBAF91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73F0B51881F4D345043A93B969B81EF4 /* Pods-WellbeingChart_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WellbeingChart_Tests/Pods-WellbeingChart_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WellbeingChart_Tests/Pods-WellbeingChart_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05074687E8D9774C9837ABBEB66C6194 /* Build configuration list for PBXNativeTarget "WellbeingChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0E305662414B8051255DFA130857430 /* Debug */,
+				6E018F484EECCC2AF904EF0AD0DB9FDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				916E0404255105F480DC4950B7625F7A /* Debug */,
+				8F17DC3A99F99FBAD606CE6963886315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A26B6D952F1EB150EDDEFEE65DA4DC5A /* Build configuration list for PBXNativeTarget "Pods-WellbeingChart_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F40B74CAE718E8D5B666A4E4D4EBAF91 /* Debug */,
+				E7B5EB0650419B34AED7BA65AB6BE3AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5E16178307C557D7915B8C02166002F /* Build configuration list for PBXNativeTarget "Pods-WellbeingChart_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C839C5853AF0585202D1C7938E1EBF7 /* Debug */,
+				1A250C893BD33CFD3ED2D6288C8F739B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
