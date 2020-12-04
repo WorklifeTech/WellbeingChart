@@ -8,11 +8,11 @@
 import Foundation
 import Charts
 
-public class WellbeingChart {
+@objc public class WellbeingChart: NSObject {
     
     var customFont: UIFont = .systemFont(ofSize: 12.0)
     
-    public init() {
+    @objc public override init() {
         let bundle = Bundle(for: WellbeingChart.self)
         let path = bundle.path(forResource: "Fonts", ofType: "bundle")
         let fontsBundle = Bundle(url: URL(fileURLWithPath: path!))
@@ -28,7 +28,7 @@ public class WellbeingChart {
         }
     }
     
-    public func getChart(data: [Double], labels: [String]) -> LineChartView {
+    @objc public func getChart(data: [Double], labels: [String]) -> LineChartView {
         self.setUpChart(data: data, labels: labels)
         return chartView
     }
