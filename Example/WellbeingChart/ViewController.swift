@@ -40,7 +40,7 @@ class ViewController: UIViewController {
             "Sep"
         ]
         
-        let chartView = WellbeingChart().getChart(data: data, labels: labels)
+        let chartView = WellbeingLineChart().getChart(data: data, labels: labels)
         
         chartViewContainer.addSubview(chartView)
         chartView.width(to: chartViewContainer)

@@ -1,5 +1,5 @@
 //
-//  WellbeingChart.swift
+//  WellbeingLineChart.swift
 //  WellbeingChart
 //
 //  Created by Rado Hečko on 02/12/2020.
@@ -8,12 +8,12 @@
 import Foundation
 import Charts
 
-@objc public class WellbeingChart: NSObject {
+@objc public class WellbeingLineChart: NSObject {
     
     var customFont: UIFont = .systemFont(ofSize: 12.0)
     
     @objc public override init() {
-        let bundle = Bundle(for: WellbeingChart.self)
+        let bundle = Bundle(for: WellbeingLineChart.self)
         let path = bundle.path(forResource: "Fonts", ofType: "bundle")
         let fontsBundle = Bundle(url: URL(fileURLWithPath: path!))
         

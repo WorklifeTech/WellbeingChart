@@ -95,7 +95,7 @@
 		81FCFDD76834B83BF46D3741C79FF29A /* MarkerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A091CA0C6E2D7A621A16127D21CAE3 /* MarkerImage.swift */; };
 		83907D8546A31C4C4B1E31DA90A0CD77 /* ChartLimitLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B2D029AD27DA6D029D54C7E078D8D9 /* ChartLimitLine.swift */; };
 		83BBD232FE2EA04587B21C81B73AFC09 /* ChartDataEntryBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BCEC7829EAD685749D56646B451F7 /* ChartDataEntryBase.swift */; };
-		85151DB6EDA73F7642905B66DC313C99 /* WellbeingChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE67F51F064339927EB8D28E14E6943 /* WellbeingChart.swift */; };
+		85151DB6EDA73F7642905B66DC313C99 /* WellbeingLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE67F51F064339927EB8D28E14E6943 /* WellbeingLineChart.swift */; };
 		8606577BE49942FFBE9764F6BAC993A8 /* BarHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB680A11CF3DED1E2AEBA712B15051E9 /* BarHighlighter.swift */; };
 		8CBA559D0C2045A8E6F7F9922C553F0F /* CandleChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DF1B832CEF8A2CB22C21D035A3E267 /* CandleChartDataProvider.swift */; };
 		8D62FB3504F2C9B9E0910E493637F7BE /* BarChartDataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091CE71E08BD7686E5F7C94C489AA189 /* BarChartDataEntry.swift */; };
@@ -359,7 +359,7 @@
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E782472A93FBB3033BF08C2D738E578 /* IScatterChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IScatterChartDataSet.swift; path = Source/Charts/Data/Interfaces/IScatterChartDataSet.swift; sourceTree = "<group>"; };
 		9FDE9E4AEDBAF803DA9F4177F5D31EE4 /* HorizontalBarHighlighter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HorizontalBarHighlighter.swift; path = Source/Charts/Highlight/HorizontalBarHighlighter.swift; sourceTree = "<group>"; };
-		9FE67F51F064339927EB8D28E14E6943 /* WellbeingChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WellbeingChart.swift; path = WellbeingChart/Classes/WellbeingChart.swift; sourceTree = "<group>"; };
+		9FE67F51F064339927EB8D28E14E6943 /* WellbeingLineChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WellbeingLineChart.swift; path = WellbeingChart/Classes/WellbeingLineChart.swift; sourceTree = "<group>"; };
 		A1C1B977ED8804E8AEEC884E7359EE58 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CEC0AA10D780511C78A48A7DEEB52E /* Charts-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Charts-prefix.pch"; sourceTree = "<group>"; };
 		A3BD1DBF9FA697AB2FE0C7500FD58C15 /* ScatterChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterChartView.swift; path = Source/Charts/Charts/ScatterChartView.swift; sourceTree = "<group>"; };
@@ -799,7 +799,7 @@
 		D5D2108621FF3E5876E4F65D2B619B39 /* WellbeingChart */ = {
 			isa = PBXGroup;
 			children = (
-				9FE67F51F064339927EB8D28E14E6943 /* WellbeingChart.swift */,
+				9FE67F51F064339927EB8D28E14E6943 /* WellbeingLineChart.swift */,
 				0C465917265876422020821C2AF825FF /* WellbeingChartFont.swift */,
 				576D887B26E4FBE08263B34D6DE01A57 /* Pod */,
 				9A9FFFB9C3C52F12759ADE84B1A2915D /* Resources */,
@@ -1253,7 +1253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				171F235ED61A700BACA3446A9DCA1D28 /* WellbeingChart-dummy.m in Sources */,
-				85151DB6EDA73F7642905B66DC313C99 /* WellbeingChart.swift in Sources */,
+				85151DB6EDA73F7642905B66DC313C99 /* WellbeingLineChart.swift in Sources */,
 				7472BFCEE65EB96F2908842FE6D19B4D /* WellbeingChartFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
