@@ -1,16 +1,29 @@
 PODS:
-  - WellbeingChart (0.1.0)
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
+  - TinyConstraints (4.0.1)
+  - WellbeingChart (0.1.0):
+    - Charts (~> 3.6.0)
+    - TinyConstraints (~> 4.0.1)
 
 DEPENDENCIES:
   - WellbeingChart (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Charts
+    - TinyConstraints
 
 EXTERNAL SOURCES:
   WellbeingChart:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WellbeingChart: d01fdaf1237008104787627b7626c01493b6adfc
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
+  WellbeingChart: 41b463a1aa92a1bc2df7c222537cf6335db0bb17
 
-PODFILE CHECKSUM: 15b290320da08ae49b60583c49f3b3b39f5db23e
+PODFILE CHECKSUM: 2278d044502598e8aa0e2660b90a1a0242f90b1d
 
 COCOAPODS: 1.9.3

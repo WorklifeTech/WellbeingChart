@@ -1,22 +1,35 @@
 {
   "name": "WellbeingChart",
   "version": "0.1.0",
-  "summary": "A short description of WellbeingChart.",
+  "summary": "Wellbeing line chart using Charts library.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/radohecko/WellbeingChart",
+  "homepage": "https://github.com/WorklifeTech/WellbeingChart.git",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "radohecko": "radoslavhecko@gmail.com"
+    "radohecko": "rhe@worklifebarometer.com"
   },
   "source": {
-    "git": "https://github.com/radohecko/WellbeingChart.git",
+    "git": "https://github.com/WorklifeTech/WellbeingChart.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "9.0"
+    "ios": "12.0"
   },
-  "source_files": "WellbeingChart/Classes/**/*"
+  "source_files": "WellbeingChart/Classes/**/*",
+  "resource_bundles": {
+    "Fonts": [
+      "WellbeingChart/Assets/*.{ttf}"
+    ]
+  },
+  "dependencies": {
+    "Charts": [
+      "~> 3.6.0"
+    ],
+    "TinyConstraints": [
+      "~> 4.0.1"
+    ]
+  }
 }
