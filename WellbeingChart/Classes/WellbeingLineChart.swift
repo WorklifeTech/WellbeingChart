@@ -155,6 +155,9 @@ import Charts
         xAxis.valueFormatter = DefaultAxisValueFormatter(block: {(index, _) in
             return labels[Int(index)]
         })
+        
+        chartView.extraRightOffset = 20
+        chartView.extraLeftOffset = 20
     }
     
     private func setHorizontalScroll(labels: [String]) {
