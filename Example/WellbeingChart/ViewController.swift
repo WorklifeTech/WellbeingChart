@@ -30,14 +30,14 @@ class ViewController: UIViewController {
         ]
         
         let labels: [String] = [
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep"
+            "20 Feb",
+            "2 Mar",
+            "14 Apr",
+            "27 May",
+            "6 Jun",
+            "18 Jul",
+            "4 Aug",
+            "29 Sep"
         ]
         
         let chartView = WellbeingLineChart().getChart(data: data, labels: labels)
