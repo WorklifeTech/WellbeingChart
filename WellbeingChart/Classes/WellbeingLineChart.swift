@@ -29,7 +29,10 @@ import Charts
     }
     
     @objc public func getChart(data: [Double], labels: [String]) -> LineChartView {
-        self.setUpChart(data: data, labels: labels)
+        if data.count > 1 && data.count == labels.count {
+            self.setUpChart(data: data, labels: labels)
+        }
+
         return chartView
     }
     
