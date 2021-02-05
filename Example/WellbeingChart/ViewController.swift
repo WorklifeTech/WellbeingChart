@@ -26,18 +26,28 @@ class ViewController: UIViewController {
             32.0,
             54.0,
             18.0,
-            75.0
+            75.0,
+            40.0,
+            50.0,
+            80.0,
+            25.0,
+            32.0
         ]
         
         let labels: [String] = [
-            "20 Feb",
-            "2 Mar",
-            "14 Apr",
-            "27 May",
-            "6 Jun",
-            "18 Jul",
-            "4 Aug",
-            "29 Sep"
+            "Feb 2020",
+            "Mar 2020",
+            "Apr 2020",
+            "May 2020",
+            "Jun 2020",
+            "Jul 2020",
+            "Aug 2020",
+            "Sep 2020",
+            "Oct 2020",
+            "Nov 2020",
+            "Dec 2020",
+            "Jan 2021",
+            "Feb 2021"
         ]
         
         let chartView = WellbeingLineChart().getChart(data: data, labels: labels)
