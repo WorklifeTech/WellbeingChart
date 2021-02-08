@@ -156,13 +156,13 @@ import Charts
         xAxis.drawGridLinesEnabled = true
         xAxis.drawGridLinesBehindDataEnabled = false
         xAxis.wordWrapEnabled = true
-        xAxis.wordWrapWidthPercent = 0.5
+        xAxis.wordWrapWidthPercent = 0.7
         xAxis.valueFormatter = DefaultAxisValueFormatter(block: {(index, _) in
             return labels[Int(index)]
         })
         
-        chartView.extraRightOffset = 15
-        chartView.extraLeftOffset = 15
+        chartView.extraRightOffset = 20
+        chartView.extraLeftOffset = 20
         chartView.extraBottomOffset = 20
     }
     
