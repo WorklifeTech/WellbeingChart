@@ -177,6 +177,7 @@ import Charts
         
         handler!.setMaximumScaleX( CGFloat(labelCount / numberOfItemsToShow));
         
+        chartView.moveViewToX(labelCount)
         chartView.scaleYEnabled = false
         chartView.scaleXEnabled = true
     }
