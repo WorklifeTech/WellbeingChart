@@ -161,7 +161,7 @@ import Charts
             return labels[Int(index)]
         })
         
-        chartView.extraRightOffset = 20
+        chartView.extraRightOffset = 25
         chartView.extraLeftOffset = 25
         chartView.extraBottomOffset = 20
     }
