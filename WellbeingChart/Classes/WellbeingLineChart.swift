@@ -162,7 +162,7 @@ import Charts
         })
         
         chartView.extraRightOffset = 20
-        chartView.extraLeftOffset = 20
+        chartView.extraLeftOffset = 25
         chartView.extraBottomOffset = 20
     }
     
