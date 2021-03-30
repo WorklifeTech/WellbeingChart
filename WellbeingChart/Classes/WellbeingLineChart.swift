@@ -44,6 +44,7 @@ import Charts
         lineChartView.legend.enabled = false
         lineChartView.leftAxis.axisMinimum = 0
         lineChartView.leftAxis.axisMaximum = 100
+        lineChartView.doubleTapToZoomEnabled = false
         
         return lineChartView
     }()
