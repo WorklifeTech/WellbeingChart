@@ -10,6 +10,10 @@ import Charts
 
 @objc public class WellbeingLineChart: NSObject {
     
+    @objc public var whiteBackground = false
+    @objc public var hideAxisAndLabels = false
+    @objc public var isHowdyScoreType = false
+    
     var customFont: UIFont = .systemFont(ofSize: 12.0)
     
     @objc public override init() {
@@ -28,7 +32,17 @@ import Charts
         }
     }
     
-    @objc public func getChart(data: [Double], labels: [String]) -> LineChartView {
+    @objc public func getChart(
+        data: [Double],
+        labels: [String],
+        whiteBackground: Bool = false,
+        hideAxisAndLabels: Bool = false,
+        isHowdyScoreType: Bool = false
+    ) -> LineChartView {
+        self.whiteBackground = whiteBackground
+        self.hideAxisAndLabels = hideAxisAndLabels
+        self.isHowdyScoreType = isHowdyScoreType
+
         if data.count > 1 && data.count == labels.count {
             self.setUpChart(data: data, labels: labels)
         }
@@ -43,7 +57,7 @@ import Charts
         lineChartView.leftAxis.enabled = false
         lineChartView.legend.enabled = false
         lineChartView.leftAxis.axisMinimum = 0
-        lineChartView.leftAxis.axisMaximum = 100
+        lineChartView.leftAxis.axisMaximum = self.isHowdyScoreType ? 5 : 100
         lineChartView.doubleTapToZoomEnabled = false
         
         return lineChartView
@@ -113,29 +127,10 @@ import Charts
     private func setData(entries: [ChartDataEntry]) {
         let dataSet: LineChartDataSet = self.getDataSet(entries: entries)
         
-        let greenZoneDataSet: LineChartDataSet = self.getZoneDataSet(
-            entries: entries,
-            treshold: 100.0,
-            color: WellbeingChartColor.green,
-            nextColor: WellbeingChartColor.lightGreen,
-            colorLocations: [1.0, 0.75, 0.5]
-        )
-        
-        let yellowZoneDataSet: LineChartDataSet = self.getZoneDataSet(
-            entries: entries,
-            treshold: 50.0,
-            color: WellbeingChartColor.yellow,
-            nextColor: WellbeingChartColor.lightYellow,
-            colorLocations: [0.5, 0.4, 0.35]
-        )
-        
-        let redZoneDataSet: LineChartDataSet = self.getZoneDataSet(
-            entries: entries,
-            treshold: 35.0,
-            color: WellbeingChartColor.red,
-            nextColor: WellbeingChartColor.lightRed,
-            colorLocations: [0.35, 0.2, 0.0]
-        )
+        let dataSetZones = self.isHowdyScoreType ? getScoreChartDataSetZones(entries: entries) : getChartDataSetZones(entries: entries)
+        let greenZoneDataSet = dataSetZones.green
+        let yellowZoneDataSet = dataSetZones.yellow
+        let redZoneDataSet = dataSetZones.red
         
         let data = LineChartData(dataSets: [greenZoneDataSet, yellowZoneDataSet, redZoneDataSet, dataSet])
         
@@ -146,6 +141,7 @@ import Charts
     
     private func setXAxis(labels: [String]) {
         let xAxis = chartView.xAxis
+        xAxis.drawLabelsEnabled = self.hideAxisAndLabels ? false : true
         
         xAxis.granularity = 1
         xAxis.gridLineWidth = 1.5
@@ -153,8 +149,8 @@ import Charts
         xAxis.labelTextColor = WellbeingChartColor.black
         xAxis.labelFont = self.customFont
         xAxis.labelPosition = .bottom
-        xAxis.drawAxisLineEnabled = true
-        xAxis.drawGridLinesEnabled = true
+        xAxis.drawAxisLineEnabled = self.hideAxisAndLabels ? false : true
+        xAxis.drawGridLinesEnabled = self.hideAxisAndLabels ? false : true
         xAxis.drawGridLinesBehindDataEnabled = false
         xAxis.wordWrapEnabled = true
         xAxis.wordWrapWidthPercent = 0.7
@@ -181,6 +177,64 @@ import Charts
         chartView.moveViewToX(labelCount)
         chartView.scaleYEnabled = false
         chartView.scaleXEnabled = true
+    }
+    
+    private func getChartDataSetZones(entries: [ChartDataEntry])
+        -> (green: LineChartDataSet, yellow: LineChartDataSet, red: LineChartDataSet) {
+        let greenZoneDataSet: LineChartDataSet = self.getZoneDataSet(
+            entries: entries,
+            treshold: 100.0,
+            color: whiteBackground ? UIColor.white : WellbeingChartColor.green,
+            nextColor: whiteBackground ? UIColor.white : WellbeingChartColor.lightGreen,
+            colorLocations: [1.0, 0.75, 0.5]
+        )
+        
+        let yellowZoneDataSet: LineChartDataSet = self.getZoneDataSet(
+            entries: entries,
+            treshold: 50.0,
+            color: whiteBackground ? UIColor.white : WellbeingChartColor.yellow,
+            nextColor: whiteBackground ? UIColor.white : WellbeingChartColor.lightYellow,
+            colorLocations: [0.5, 0.4, 0.35]
+        )
+        
+        let redZoneDataSet: LineChartDataSet = self.getZoneDataSet(
+            entries: entries,
+            treshold: 35.0,
+            color: whiteBackground ? UIColor.white : WellbeingChartColor.red,
+            nextColor: whiteBackground ? UIColor.white : WellbeingChartColor.lightRed,
+            colorLocations: [0.35, 0.2, 0.0]
+        )
+        
+        return (greenZoneDataSet, yellowZoneDataSet, redZoneDataSet)
+    }
+    
+    private func getScoreChartDataSetZones(entries: [ChartDataEntry])
+        -> (green: LineChartDataSet, yellow: LineChartDataSet, red: LineChartDataSet) {
+        let greenZoneDataSet: LineChartDataSet = self.getZoneDataSet(
+            entries: entries,
+            treshold: 5.0,
+            color: whiteBackground ? UIColor.white : WellbeingChartColor.green,
+            nextColor: whiteBackground ? UIColor.white : WellbeingChartColor.lightGreen,
+            colorLocations: [1.0, 0.72, 0.52, 0.42]
+        )
+        
+        let yellowZoneDataSet: LineChartDataSet = self.getZoneDataSet(
+            entries: entries,
+            treshold: 2.0,
+            color: whiteBackground ? UIColor.white : WellbeingChartColor.yellow,
+            nextColor: whiteBackground ? UIColor.white : WellbeingChartColor.lightYellow,
+            colorLocations: [0.4, 0.3, 0.21]
+        )
+        
+        let redZoneDataSet: LineChartDataSet = self.getZoneDataSet(
+            entries: entries,
+            treshold: 1.0,
+            color: whiteBackground ? UIColor.white : WellbeingChartColor.red,
+            nextColor: whiteBackground ? UIColor.white : WellbeingChartColor.lightRed,
+            colorLocations: [0.2, 0.1, 0.0]
+        )
+        
+        return (greenZoneDataSet, yellowZoneDataSet, redZoneDataSet)
     }
     
     private struct WellbeingChartColor {
