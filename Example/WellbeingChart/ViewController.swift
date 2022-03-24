@@ -34,6 +34,22 @@ class ViewController: UIViewController {
             32.0
         ]
         
+        let scores: [Double] = [
+            4.0,
+            5.0,
+            3.8,
+            2.5,
+            3.2,
+            4.0,
+            1.8,
+            3.4,
+            4.0,
+            5.0,
+            2.8,
+            2.5,
+            3.2
+        ]
+        
         let labels: [String] = [
             "1 Feb 2020",
             "12 Mar 2020",
@@ -50,7 +66,11 @@ class ViewController: UIViewController {
             "19 Feb 2021"
         ]
         
-        let chartView = WellbeingLineChart().getChart(data: data, labels: labels)
+        let isHowdyScoreType = false
+        let dataset = isHowdyScoreType ? scores : data
+        
+        let chartView = WellbeingLineChart()
+            .getChart(data: dataset, labels: labels, whiteBackground: false, hideAxisAndLabels: false, isHowdyScoreType: isHowdyScoreType)
         
         chartViewContainer.addSubview(chartView)
         chartView.width(to: chartViewContainer)
