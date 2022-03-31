@@ -13,6 +13,8 @@ import Charts
     @objc public var whiteBackground = false
     @objc public var hideAxisAndLabels = false
     @objc public var isHowdyScoreType = false
+    @objc public var lineWidth = 3.0
+    @objc public var circleRadius = 4.0
     
     var customFont: UIFont = .systemFont(ofSize: 12.0)
     
@@ -37,11 +39,15 @@ import Charts
         labels: [String],
         whiteBackground: Bool = false,
         hideAxisAndLabels: Bool = false,
-        isHowdyScoreType: Bool = false
+        isHowdyScoreType: Bool = false,
+        lineWidth: Double = 3.0,
+        circleRadius: Double = 4.0
     ) -> LineChartView {
         self.whiteBackground = whiteBackground
         self.hideAxisAndLabels = hideAxisAndLabels
         self.isHowdyScoreType = isHowdyScoreType
+        self.lineWidth = lineWidth
+        self.circleRadius = circleRadius
 
         if data.count > 1 && data.count == labels.count {
             self.setUpChart(data: data, labels: labels)
@@ -79,9 +85,9 @@ import Charts
         let color = WellbeingChartColor.black
         let dataSet: LineChartDataSet = LineChartDataSet(entries: entries, label: nil)
         
-        dataSet.lineWidth = 3.0
-        dataSet.circleRadius = 4.0
-        dataSet.circleHoleRadius = 4.0
+        dataSet.lineWidth = self.lineWidth
+        dataSet.circleRadius = self.circleRadius
+        dataSet.circleHoleRadius = self.circleRadius
         dataSet.setColor(color)
         dataSet.setCircleColor(color)
         dataSet.circleHoleColor = color
