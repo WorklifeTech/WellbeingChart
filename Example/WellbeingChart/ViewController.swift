@@ -70,7 +70,15 @@ class ViewController: UIViewController {
         let dataset = isHowdyScoreType ? scores : data
         
         let chartView = WellbeingLineChart()
-            .getChart(data: dataset, labels: labels, whiteBackground: false, hideAxisAndLabels: false, isHowdyScoreType: isHowdyScoreType)
+            .getChart(
+                data: dataset,
+                labels: labels,
+                whiteBackground: false,
+                hideAxisAndLabels: false,
+                isHowdyScoreType: isHowdyScoreType,
+                lineWidth: 1,
+                circleRadius: 1
+            )
         
         chartViewContainer.addSubview(chartView)
         chartView.width(to: chartViewContainer)
