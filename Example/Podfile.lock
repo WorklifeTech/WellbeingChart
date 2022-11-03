@@ -1,10 +1,12 @@
 PODS:
-  - Charts (3.6.0):
-    - Charts/Core (= 3.6.0)
-  - Charts/Core (3.6.0)
+  - Charts (4.1.0):
+    - Charts/Core (= 4.1.0)
+  - Charts/Core (4.1.0):
+    - SwiftAlgorithms (~> 1.0)
+  - SwiftAlgorithms (1.0.0)
   - TinyConstraints (4.0.1)
-  - WellbeingChart (0.1.0):
-    - Charts (~> 3.6.0)
+  - WellbeingChart (2.0.3):
+    - Charts (~> 4.1.0)
     - TinyConstraints (~> 4.0.1)
 
 DEPENDENCIES:
@@ -13,6 +15,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Charts
+    - SwiftAlgorithms
     - TinyConstraints
 
 EXTERNAL SOURCES:
@@ -20,10 +23,11 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  Charts: 354f86803d11d9c35de280587fef50d1af063978
+  SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
   TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
-  WellbeingChart: 41b463a1aa92a1bc2df7c222537cf6335db0bb17
+  WellbeingChart: 525889dcbe58994c7b18fa32ddf2b9ef1e4a346d
 
 PODFILE CHECKSUM: 2278d044502598e8aa0e2660b90a1a0242f90b1d
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.11.3

@@ -83,7 +83,7 @@ import Charts
     
     private func getDataSet(entries: [ChartDataEntry]) -> LineChartDataSet {
         let color = WellbeingChartColor.black
-        let dataSet: LineChartDataSet = LineChartDataSet(entries: entries, label: nil)
+        let dataSet: LineChartDataSet = LineChartDataSet(entries: entries, label: "")
         
         dataSet.lineWidth = self.lineWidth
         dataSet.circleRadius = self.circleRadius
@@ -110,7 +110,7 @@ import Charts
             zoneData.append(ChartDataEntry(x: entry.x, y: treshold))
         }
         
-        let zoneDataSet: LineChartDataSet = LineChartDataSet(entries: zoneData, label: nil)
+        let zoneDataSet: LineChartDataSet = LineChartDataSet(entries: zoneData, label: "")
         
         zoneDataSet.lineWidth = 0
         zoneDataSet.formLineWidth = 0
@@ -125,7 +125,7 @@ import Charts
         let gradientColors = [color.cgColor, nextColor.cgColor, UIColor.white.cgColor] as CFArray
         let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors, locations: colorLocations)
         
-        zoneDataSet.fill = Fill.fillWithLinearGradient(gradient!, angle: 90.0)
+        zoneDataSet.fill = LinearGradientFill(gradient: gradient!, angle: 90.0)
         
         return zoneDataSet
     }
@@ -140,7 +140,7 @@ import Charts
         
         let data = LineChartData(dataSets: [greenZoneDataSet, yellowZoneDataSet, redZoneDataSet, dataSet])
         
-        data.highlightEnabled = false
+        data.isHighlightEnabled = false
         
         chartView.data = data
     }
@@ -178,7 +178,7 @@ import Charts
         let handler = chartView.viewPortHandler;
         let labelCount = Double(labels.count - 1)
         
-        handler!.setMaximumScaleX( CGFloat(labelCount / numberOfItemsToShow));
+        handler.setMaximumScaleX( CGFloat(labelCount / numberOfItemsToShow));
         
         chartView.moveViewToX(labelCount)
         chartView.scaleYEnabled = false

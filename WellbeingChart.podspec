@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WellbeingChart'
-  s.version          = '2.0.3'
+  s.version          = '2.0.4'
   s.summary          = 'Wellbeing line chart using Charts library.'
 
 # This description is used to generate tags and improve search results.
@@ -40,6 +40,6 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
 
-  s.dependency 'Charts', '~> 3.6.0'
+  s.dependency 'Charts', '~> 4.1.0'
   s.dependency 'TinyConstraints', '~> 4.0.1'
 end
