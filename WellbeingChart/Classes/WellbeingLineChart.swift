@@ -17,6 +17,7 @@ import Charts
     @objc public var circleRadius = 4.0
     @objc public var enableLeftAxis = false
     @objc public var enableDataZones = true
+    @objc public var enableCustomMarker = false
     
     var customFont: UIFont = .systemFont(ofSize: 12.0)
     
@@ -46,6 +47,7 @@ import Charts
         circleRadius: Double = 4.0
         enableLeftAxis: Bool = false,
         enableDataZones: Bool = true,
+        enableCustomMarker: Bool = false,
     ) -> LineChartView {
         self.whiteBackground = whiteBackground
         self.hideAxisAndLabels = hideAxisAndLabels
@@ -54,6 +56,7 @@ import Charts
         self.circleRadius = circleRadius
         self.enableLeftAxis = enableLeftAxis
         self.enableDataZones = enableDataZones
+        self.enableCustomMarker = enableCustomMarker
 
         if data.count > 1 && data.count == labels.count {
             self.setUpChart(data: data, labels: labels)
@@ -79,14 +82,35 @@ import Charts
         lineChartView.leftAxis.axisMaximum = self.isHowdyScoreType ? 5 : 100
         lineChartView.doubleTapToZoomEnabled = false
         
+        if enableCustomMarker {
+            lineChartView.highlightPerTapEnabled = true
+            lineChartView.highlightPerDragEnabled = true
+        }
+        
         return lineChartView
     }()
+    
+    private func setCustomMarker(labels: [String])
+    {
+        let marker = WellbeingLineChartMarker(labels: labels,
+                                              font: UIFont(name: "Poppins-Regular", size: 12.0) ?? .systemFont(ofSize: 12.0),
+                                              textColor: UIColor.white.withAlphaComponent(0.6),
+                                              insets: UIEdgeInsets(top: 8, left: 0, bottom: 20, right: 0))
+                        
+        marker.chartView = chartView
+        marker.minimumSize = CGSize(width: 40, height: 20)
+        chartView.marker = marker
+    }
     
     private func setUpChart(data: [Double], labels: [String]) {
         var entries: [ChartDataEntry] = []
         
         for (index, element) in data.enumerated() {
             entries.append(ChartDataEntry(x: Double(index), y: element))
+        }
+
+        if enableCustomMarker {
+            setCustomMarker(labels: labels)
         }
         
         self.setData(entries: entries)
@@ -106,6 +130,7 @@ import Charts
         dataSet.circleHoleColor = color
         dataSet.drawValuesEnabled = false
         dataSet.drawFilledEnabled = false
+        dataSet.highlightLineWidth = 0
         
         return dataSet
     }
@@ -126,6 +151,7 @@ import Charts
         let zoneDataSet: LineChartDataSet = LineChartDataSet(entries: zoneData, label: "")
         
         zoneDataSet.lineWidth = 0
+        zoneDataSet.highlightLineWidth = 0
         zoneDataSet.formLineWidth = 0
         zoneDataSet.drawFilledEnabled = false
         zoneDataSet.drawValuesEnabled = false
@@ -154,7 +180,7 @@ import Charts
         let sets = enableDataZones ? [greenZoneDataSet, yellowZoneDataSet, redZoneDataSet, dataSet] : [dataSet]
         let data = LineChartData(dataSets: sets)
         
-        data.isHighlightEnabled = false
+        data.isHighlightEnabled = enableCustomMarker
         
         chartView.data = data
     }
