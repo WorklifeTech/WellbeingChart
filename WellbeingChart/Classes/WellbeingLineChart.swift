@@ -19,6 +19,7 @@ import Charts
     @objc public var enableDataZones = true
     @objc public var enableCustomMarker = false
     @objc public var transparentBackground = false
+    @objc public var lineColor = WellbeingChartColor.black
     
     var customFont: UIFont = .systemFont(ofSize: 12.0)
     
@@ -45,7 +46,8 @@ import Charts
         hideAxisAndLabels: Bool = false,
         isHowdyScoreType: Bool = false,
         lineWidth: Double = 3.0,
-        circleRadius: Double = 4.0
+        circleRadius: Double = 4.0,
+        lineColor: UIColor = UIColor.black,
         enableLeftAxis: Bool = false,
         enableDataZones: Bool = true,
         enableCustomMarker: Bool = false,
@@ -56,6 +58,7 @@ import Charts
         self.isHowdyScoreType = isHowdyScoreType
         self.lineWidth = lineWidth
         self.circleRadius = circleRadius
+        self.lineColor = lineColor
         self.enableLeftAxis = enableLeftAxis
         self.enableDataZones = enableDataZones
         self.enableCustomMarker = enableCustomMarker
@@ -122,7 +125,7 @@ import Charts
     }
     
     private func getDataSet(entries: [ChartDataEntry]) -> LineChartDataSet {
-        let color = WellbeingChartColor.black
+        let color = lineColor
         let dataSet: LineChartDataSet = LineChartDataSet(entries: entries, label: "")
         
         dataSet.lineWidth = self.lineWidth
