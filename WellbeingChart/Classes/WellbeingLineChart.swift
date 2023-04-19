@@ -86,7 +86,6 @@ import Charts
         lineChartView.legend.enabled = false
         lineChartView.leftAxis.axisMinimum = 0
         lineChartView.leftAxis.axisMaximum = self.isHowdyScoreType ? 5 : 100
-        lineChartView.doubleTapToZoomEnabled = false
         
         if enableCustomMarker {
             lineChartView.highlightPerTapEnabled = true
