@@ -18,6 +18,7 @@ import Charts
     @objc public var enableLeftAxis = false
     @objc public var enableDataZones = true
     @objc public var enableCustomMarker = false
+    @objc public var transparentBackground = false
     
     var customFont: UIFont = .systemFont(ofSize: 12.0)
     
@@ -48,6 +49,7 @@ import Charts
         enableLeftAxis: Bool = false,
         enableDataZones: Bool = true,
         enableCustomMarker: Bool = false,
+        transparentBackground: Bool = false
     ) -> LineChartView {
         self.whiteBackground = whiteBackground
         self.hideAxisAndLabels = hideAxisAndLabels
@@ -57,6 +59,7 @@ import Charts
         self.enableLeftAxis = enableLeftAxis
         self.enableDataZones = enableDataZones
         self.enableCustomMarker = enableCustomMarker
+        self.transparentBackground = transparentBackground
 
         if data.count > 1 && data.count == labels.count {
             self.setUpChart(data: data, labels: labels)
@@ -157,14 +160,17 @@ import Charts
         zoneDataSet.drawValuesEnabled = false
         zoneDataSet.drawCirclesEnabled = false
         zoneDataSet.drawCircleHoleEnabled = false
-        zoneDataSet.drawFilledEnabled = true
-        zoneDataSet.fillColor = color;
-        zoneDataSet.setColor(color);
         
         let gradientColors = [color.cgColor, nextColor.cgColor, UIColor.white.cgColor] as CFArray
         let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors, locations: colorLocations)
         
-        zoneDataSet.fill = LinearGradientFill(gradient: gradient!, angle: 90.0)
+        if !transparentBackground {
+            zoneDataSet.drawFilledEnabled = true
+            zoneDataSet.fillColor = color;
+            zoneDataSet.setColor(color);
+            zoneDataSet.fill = LinearGradientFill(gradient: gradient!, angle: 90.0)
+        }
+
         
         return zoneDataSet
     }
