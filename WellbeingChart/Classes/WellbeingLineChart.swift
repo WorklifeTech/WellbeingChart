@@ -15,6 +15,11 @@ import Charts
     @objc public var isHowdyScoreType = false
     @objc public var lineWidth = 3.0
     @objc public var circleRadius = 4.0
+    @objc public var enableLeftAxis = false
+    @objc public var enableDataZones = true
+    @objc public var enableCustomMarker = false
+    @objc public var transparentBackground = false
+    @objc public var lineColor = WellbeingChartColor.black
     
     var customFont: UIFont = .systemFont(ofSize: 12.0)
     
@@ -41,13 +46,23 @@ import Charts
         hideAxisAndLabels: Bool = false,
         isHowdyScoreType: Bool = false,
         lineWidth: Double = 3.0,
-        circleRadius: Double = 4.0
+        circleRadius: Double = 4.0,
+        lineColor: UIColor = UIColor.black,
+        enableLeftAxis: Bool = false,
+        enableDataZones: Bool = true,
+        enableCustomMarker: Bool = false,
+        transparentBackground: Bool = false
     ) -> LineChartView {
         self.whiteBackground = whiteBackground
         self.hideAxisAndLabels = hideAxisAndLabels
         self.isHowdyScoreType = isHowdyScoreType
         self.lineWidth = lineWidth
         self.circleRadius = circleRadius
+        self.lineColor = lineColor
+        self.enableLeftAxis = enableLeftAxis
+        self.enableDataZones = enableDataZones
+        self.enableCustomMarker = enableCustomMarker
+        self.transparentBackground = transparentBackground
 
         if data.count > 1 && data.count == labels.count {
             self.setUpChart(data: data, labels: labels)
@@ -60,20 +75,47 @@ import Charts
         let lineChartView = LineChartView()
         
         lineChartView.rightAxis.enabled = false
-        lineChartView.leftAxis.enabled = false
+        lineChartView.leftAxis.enabled = enableLeftAxis
+        
+        if enableLeftAxis {
+            lineChartView.leftAxis.drawLabelsEnabled = false
+            lineChartView.leftAxis.gridColor = UIColor.white.withAlphaComponent(0)
+            lineChartView.leftAxis.axisLineColor = UIColor.white.withAlphaComponent(0)
+        }
+        
         lineChartView.legend.enabled = false
         lineChartView.leftAxis.axisMinimum = 0
         lineChartView.leftAxis.axisMaximum = self.isHowdyScoreType ? 5 : 100
-        lineChartView.doubleTapToZoomEnabled = false
+        
+        if enableCustomMarker {
+            lineChartView.highlightPerTapEnabled = true
+            lineChartView.highlightPerDragEnabled = true
+        }
         
         return lineChartView
     }()
+    
+    private func setCustomMarker(labels: [String])
+    {
+        let marker = WellbeingLineChartMarker(labels: labels,
+                                              font: UIFont(name: "Poppins-Regular", size: 12.0) ?? .systemFont(ofSize: 12.0),
+                                              textColor: UIColor.white.withAlphaComponent(0.6),
+                                              insets: UIEdgeInsets(top: 8, left: 0, bottom: 20, right: 0))
+                        
+        marker.chartView = chartView
+        marker.minimumSize = CGSize(width: 40, height: 20)
+        chartView.marker = marker
+    }
     
     private func setUpChart(data: [Double], labels: [String]) {
         var entries: [ChartDataEntry] = []
         
         for (index, element) in data.enumerated() {
             entries.append(ChartDataEntry(x: Double(index), y: element))
+        }
+
+        if enableCustomMarker {
+            setCustomMarker(labels: labels)
         }
         
         self.setData(entries: entries)
@@ -82,7 +124,7 @@ import Charts
     }
     
     private func getDataSet(entries: [ChartDataEntry]) -> LineChartDataSet {
-        let color = WellbeingChartColor.black
+        let color = lineColor
         let dataSet: LineChartDataSet = LineChartDataSet(entries: entries, label: "")
         
         dataSet.lineWidth = self.lineWidth
@@ -93,6 +135,7 @@ import Charts
         dataSet.circleHoleColor = color
         dataSet.drawValuesEnabled = false
         dataSet.drawFilledEnabled = false
+        dataSet.highlightLineWidth = 0
         
         return dataSet
     }
@@ -113,19 +156,23 @@ import Charts
         let zoneDataSet: LineChartDataSet = LineChartDataSet(entries: zoneData, label: "")
         
         zoneDataSet.lineWidth = 0
+        zoneDataSet.highlightLineWidth = 0
         zoneDataSet.formLineWidth = 0
         zoneDataSet.drawFilledEnabled = false
         zoneDataSet.drawValuesEnabled = false
         zoneDataSet.drawCirclesEnabled = false
         zoneDataSet.drawCircleHoleEnabled = false
-        zoneDataSet.drawFilledEnabled = true
-        zoneDataSet.fillColor = color;
-        zoneDataSet.setColor(color);
         
         let gradientColors = [color.cgColor, nextColor.cgColor, UIColor.white.cgColor] as CFArray
         let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors, locations: colorLocations)
         
-        zoneDataSet.fill = LinearGradientFill(gradient: gradient!, angle: 90.0)
+        if !transparentBackground {
+            zoneDataSet.drawFilledEnabled = true
+            zoneDataSet.fillColor = color;
+            zoneDataSet.setColor(color);
+            zoneDataSet.fill = LinearGradientFill(gradient: gradient!, angle: 90.0)
+        }
+
         
         return zoneDataSet
     }
@@ -138,9 +185,10 @@ import Charts
         let yellowZoneDataSet = dataSetZones.yellow
         let redZoneDataSet = dataSetZones.red
         
-        let data = LineChartData(dataSets: [greenZoneDataSet, yellowZoneDataSet, redZoneDataSet, dataSet])
+        let sets = enableDataZones ? [greenZoneDataSet, yellowZoneDataSet, redZoneDataSet, dataSet] : [dataSet]
+        let data = LineChartData(dataSets: sets)
         
-        data.isHighlightEnabled = false
+        data.isHighlightEnabled = enableCustomMarker
         
         chartView.data = data
     }
@@ -148,7 +196,6 @@ import Charts
     private func setXAxis(labels: [String]) {
         let xAxis = chartView.xAxis
         xAxis.drawLabelsEnabled = self.hideAxisAndLabels ? false : true
-        
         xAxis.granularity = 1
         xAxis.gridLineWidth = 1.5
         xAxis.gridColor = WellbeingChartColor.grey
@@ -163,6 +210,22 @@ import Charts
         xAxis.valueFormatter = DefaultAxisValueFormatter(block: {(index, _) in
             return labels[Int(index)]
         })
+        
+        if enableLeftAxis {
+            let ll1 = ChartLimitLine(limit: 50, label: "")
+            ll1.lineWidth = 4
+            ll1.lineColor = UIColor.white.withAlphaComponent(0.2)
+            ll1.labelPosition = .rightTop
+            ll1.valueFont = customFont
+            ll1.lineDashLengths = [5,5]
+            
+            let leftAxis = chartView.leftAxis
+            leftAxis.removeAllLimitLines()
+            leftAxis.addLimitLine(ll1)
+            leftAxis.axisMaximum = 100
+            leftAxis.axisMinimum = 0
+            leftAxis.drawLimitLinesBehindDataEnabled = false
+        }
         
         chartView.extraRightOffset = 25
         chartView.extraLeftOffset = 25
@@ -241,16 +304,5 @@ import Charts
         )
         
         return (greenZoneDataSet, yellowZoneDataSet, redZoneDataSet)
-    }
-    
-    private struct WellbeingChartColor {
-        static let green = UIColor(red: 0.1686, green: 1, blue: 0.502, alpha: 1.0)
-        static let lightGreen = UIColor(red: 0.1686, green: 1, blue: 0.502, alpha: 1.0)
-        static let yellow = UIColor(red: 0.949, green: 1, blue: 0.2471, alpha: 1.0)
-        static let lightYellow = UIColor(red: 1, green: 0.9333, blue: 0.6667, alpha: 1.0)
-        static let red = UIColor(red: 1, green: 0.4353, blue: 0.3098, alpha: 1.0)
-        static let lightRed = UIColor(red: 1, green: 0.5882, blue: 0.498, alpha: 1.0)
-        static let black = UIColor(red: 0.1882, green: 0.1882, blue: 0.1882, alpha: 1.0)
-        static let grey = UIColor(red: 0.8588, green: 0.8588, blue: 0.8588, alpha: 1.0)
     }
 }

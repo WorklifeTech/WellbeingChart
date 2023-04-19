@@ -12,6 +12,7 @@ import TinyConstraints
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var chartViewContainer: UIView!
     
     override func viewDidLoad() {
@@ -25,13 +26,13 @@ class ViewController: UIViewController {
             25.0,
             32.0,
             54.0,
-            18.0,
+            18.0, // split point custom marker
             75.0,
             40.0,
-            50.0,
+            60.0,
             80.0,
             25.0,
-            32.0
+            90.0
         ]
         
         let scores: [Double] = [
@@ -51,25 +52,26 @@ class ViewController: UIViewController {
         ]
         
         let labels: [String] = [
-            "1 Feb 2020",
-            "12 Mar 2020",
-            "10 Apr 2020",
-            "2 May 2020",
-            "18 Jun 2020",
-            "21 Jul 2020",
-            "30 Aug 2020",
-            "22 Sep 2020",
-            "7 Oct 2020",
-            "9 Nov 2020",
-            "24 Dec 2020",
-            "5 Jan 2021",
-            "19 Feb 2021"
+            "1 Feb \n2020",
+            "12 Mar \n2020",
+            "10 Apr \n2020",
+            "2 May \n2020",
+            "18 Jun \n2020",
+            "21 Jul \n2020",
+            "30 Aug \n2020", // split point custom marker
+            "22 Sep \n2020",
+            "7 Oct \n2020",
+            "9 Nov \n2020",
+            "24 Dec \n2020",
+            "5 Jan \n2021",
+            "19 Feb \n2021"
         ]
         
         let isHowdyScoreType = false
+        let isInterventionType = false
         let dataset = isHowdyScoreType ? scores : data
         
-        let chartView = WellbeingLineChart()
+        var chartView = WellbeingLineChart()
             .getChart(
                 data: dataset,
                 labels: labels,
@@ -77,8 +79,36 @@ class ViewController: UIViewController {
                 hideAxisAndLabels: false,
                 isHowdyScoreType: isHowdyScoreType,
                 lineWidth: 1,
-                circleRadius: 1
+                circleRadius: 1,
+                lineColor: UIColor.black,
+                enableLeftAxis: false,
+                enableDataZones: true,
+                enableCustomMarker: false,
+                transparentBackground: false
             )
+        
+        if isInterventionType {
+            chartView = WellbeingLineChart()
+                .getChart(
+                    data: dataset,
+                    labels: labels,
+                    whiteBackground: false,
+                    hideAxisAndLabels: true,
+                    isHowdyScoreType: isHowdyScoreType,
+                    lineWidth: 2, // intervention style 2
+                    circleRadius: 4, // intervention styke 4
+                    lineColor: UIColor.white,
+                    enableLeftAxis: true,
+                    enableDataZones: false,
+                    enableCustomMarker: true,
+                    transparentBackground: true
+                )
+        }
+        
+        if #available(iOS 15.0, *), isInterventionType {
+            containerView.backgroundColor = UIColor.systemCyan
+            chartViewContainer.backgroundColor = UIColor.systemCyan
+        }
         
         chartViewContainer.addSubview(chartView)
         chartView.width(to: chartViewContainer)
