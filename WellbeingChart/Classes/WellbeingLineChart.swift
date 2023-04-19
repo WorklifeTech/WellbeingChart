@@ -15,6 +15,7 @@ import Charts
     @objc public var isHowdyScoreType = false
     @objc public var lineWidth = 3.0
     @objc public var circleRadius = 4.0
+    @objc public var enableLeftAxis = false
     
     var customFont: UIFont = .systemFont(ofSize: 12.0)
     
@@ -42,12 +43,14 @@ import Charts
         isHowdyScoreType: Bool = false,
         lineWidth: Double = 3.0,
         circleRadius: Double = 4.0
+        enableLeftAxis: Bool = false,
     ) -> LineChartView {
         self.whiteBackground = whiteBackground
         self.hideAxisAndLabels = hideAxisAndLabels
         self.isHowdyScoreType = isHowdyScoreType
         self.lineWidth = lineWidth
         self.circleRadius = circleRadius
+        self.enableLeftAxis = enableLeftAxis
 
         if data.count > 1 && data.count == labels.count {
             self.setUpChart(data: data, labels: labels)
@@ -60,7 +63,14 @@ import Charts
         let lineChartView = LineChartView()
         
         lineChartView.rightAxis.enabled = false
-        lineChartView.leftAxis.enabled = false
+        lineChartView.leftAxis.enabled = enableLeftAxis
+        
+        if enableLeftAxis {
+            lineChartView.leftAxis.drawLabelsEnabled = false
+            lineChartView.leftAxis.gridColor = UIColor.white.withAlphaComponent(0)
+            lineChartView.leftAxis.axisLineColor = UIColor.white.withAlphaComponent(0)
+        }
+        
         lineChartView.legend.enabled = false
         lineChartView.leftAxis.axisMinimum = 0
         lineChartView.leftAxis.axisMaximum = self.isHowdyScoreType ? 5 : 100
@@ -148,7 +158,6 @@ import Charts
     private func setXAxis(labels: [String]) {
         let xAxis = chartView.xAxis
         xAxis.drawLabelsEnabled = self.hideAxisAndLabels ? false : true
-        
         xAxis.granularity = 1
         xAxis.gridLineWidth = 1.5
         xAxis.gridColor = WellbeingChartColor.grey
@@ -163,6 +172,22 @@ import Charts
         xAxis.valueFormatter = DefaultAxisValueFormatter(block: {(index, _) in
             return labels[Int(index)]
         })
+        
+        if enableLeftAxis {
+            let ll1 = ChartLimitLine(limit: 50, label: "")
+            ll1.lineWidth = 4
+            ll1.lineColor = UIColor.white.withAlphaComponent(0.2)
+            ll1.labelPosition = .rightTop
+            ll1.valueFont = customFont
+            ll1.lineDashLengths = [5,5]
+            
+            let leftAxis = chartView.leftAxis
+            leftAxis.removeAllLimitLines()
+            leftAxis.addLimitLine(ll1)
+            leftAxis.axisMaximum = 100
+            leftAxis.axisMinimum = 0
+            leftAxis.drawLimitLinesBehindDataEnabled = false
+        }
         
         chartView.extraRightOffset = 25
         chartView.extraLeftOffset = 25
