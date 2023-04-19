@@ -16,6 +16,7 @@ import Charts
     @objc public var lineWidth = 3.0
     @objc public var circleRadius = 4.0
     @objc public var enableLeftAxis = false
+    @objc public var enableDataZones = true
     
     var customFont: UIFont = .systemFont(ofSize: 12.0)
     
@@ -44,6 +45,7 @@ import Charts
         lineWidth: Double = 3.0,
         circleRadius: Double = 4.0
         enableLeftAxis: Bool = false,
+        enableDataZones: Bool = true,
     ) -> LineChartView {
         self.whiteBackground = whiteBackground
         self.hideAxisAndLabels = hideAxisAndLabels
@@ -51,6 +53,7 @@ import Charts
         self.lineWidth = lineWidth
         self.circleRadius = circleRadius
         self.enableLeftAxis = enableLeftAxis
+        self.enableDataZones = enableDataZones
 
         if data.count > 1 && data.count == labels.count {
             self.setUpChart(data: data, labels: labels)
@@ -148,7 +151,8 @@ import Charts
         let yellowZoneDataSet = dataSetZones.yellow
         let redZoneDataSet = dataSetZones.red
         
-        let data = LineChartData(dataSets: [greenZoneDataSet, yellowZoneDataSet, redZoneDataSet, dataSet])
+        let sets = enableDataZones ? [greenZoneDataSet, yellowZoneDataSet, redZoneDataSet, dataSet] : [dataSet]
+        let data = LineChartData(dataSets: sets)
         
         data.isHighlightEnabled = false
         
