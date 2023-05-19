@@ -71,7 +71,10 @@ open class WellbeingLineChartMarker: MarkerImage
             size: size)
 
         rect.origin.x -= size.width / 2.0
-        rect.origin.y -= size.height
+        
+        if offset.y == 0 {
+            rect.origin.y -= size.height
+        }
 
         context.saveGState()
         context.setFillColor(UIColor.clear.cgColor)
@@ -80,20 +83,30 @@ open class WellbeingLineChartMarker: MarkerImage
         
         let spaceOffsetY = point.y - size.height
         
+        let defaultHeight = CGFloat(rect.origin.y - spaceOffsetY + offset.y)
+        var height = self.chartView?.viewPortHandler.chartHeight ?? defaultHeight
+        
+        if ((self.chartView?.viewPortHandler.chartHeight) != nil) {
+            height -= ((height * 0.55) - ((height / 2) - point.y)) + 20
+        }
+        
         if offset.y == 0 {
             drawPointerLine(context: context, rect: rect, spaceOffsetY: spaceOffsetY)
         } else {
-            drawPointerLineReverse(context: context, rect: rect, spaceOffsetY: spaceOffsetY, point: point)
+            drawPointerLineReverse(context: context, rect: rect, spaceOffsetY: spaceOffsetY, point: point, height: height)
         }
 
-        if offset.y > 0 {
-            rect.origin.y += self.insets.top + (offset.y / 2) - 3
-        } else {
+        if offset.y == 0 {
             rect.origin.y += self.insets.top
         }
 
         rect.size.height -= self.insets.top + self.insets.bottom
-        rect.origin.y -= spaceOffsetY
+        
+        if offset.y == 0 {
+            rect.origin.y -= spaceOffsetY
+        } else {
+            rect.origin.y = point.y + height + 5
+        }
 
         UIGraphicsPushContext(context)
 
@@ -185,14 +198,9 @@ open class WellbeingLineChartMarker: MarkerImage
         context.drawPath(using: .fillStroke)
     }
     
-    private func drawPointerLineReverse(context: CGContext, rect: CGRect, spaceOffsetY: Double, point: CGPoint)
+    private func drawPointerLineReverse(context: CGContext, rect: CGRect, spaceOffsetY: Double, point: CGPoint, height: CGFloat)
     {
         var originY = rect.origin.y - spaceOffsetY
-        let offset = self.offsetForDrawing(atPoint: point)
-
-        if (spaceOffsetY < 0) {
-            originY = 5
-        }
 
         originY = point.y
 
@@ -203,7 +211,7 @@ open class WellbeingLineChartMarker: MarkerImage
 
         context.addLine(to: CGPoint(
             x: point.x,
-            y: originY + offset.y))
+            y: originY + height))
 
         context.setStrokeColor(textColor.cgColor)
         context.drawPath(using: .fillStroke)
