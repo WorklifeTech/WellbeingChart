@@ -222,7 +222,7 @@ import Charts
             let leftAxis = chartView.leftAxis
             leftAxis.removeAllLimitLines()
             leftAxis.addLimitLine(ll1)
-            leftAxis.axisMaximum = 100
+            leftAxis.axisMaximum = 110
             leftAxis.axisMinimum = 0
             leftAxis.drawLimitLinesBehindDataEnabled = false
         }
@@ -230,6 +230,7 @@ import Charts
         chartView.extraRightOffset = 25
         chartView.extraLeftOffset = 25
         chartView.extraBottomOffset = 20
+        chartView.extraTopOffset = 20
     }
     
     private func setHorizontalScroll(labels: [String]) {
