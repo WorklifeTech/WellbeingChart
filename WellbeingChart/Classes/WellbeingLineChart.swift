@@ -13,6 +13,7 @@ import Charts
     @objc public var whiteBackground = false
     @objc public var hideAxisAndLabels = false
     @objc public var isHowdyScoreType = false
+    @objc public var isHowdyIndexType = false
     @objc public var lineWidth = 3.0
     @objc public var circleRadius = 4.0
     @objc public var enableLeftAxis = false
@@ -20,6 +21,7 @@ import Charts
     @objc public var enableCustomMarker = false
     @objc public var transparentBackground = false
     @objc public var lineColor = WellbeingChartColor.black
+    @objc public var benchmark: [Double]? = nil
     
     var customFont: UIFont = .systemFont(ofSize: 12.0)
     
@@ -51,7 +53,9 @@ import Charts
         enableLeftAxis: Bool = false,
         enableDataZones: Bool = true,
         enableCustomMarker: Bool = false,
-        transparentBackground: Bool = false
+        transparentBackground: Bool = false,
+        benchmark: [Double]? = nil,
+        isHowdyIndexType: Bool = false
     ) -> LineChartView {
         self.whiteBackground = whiteBackground
         self.hideAxisAndLabels = hideAxisAndLabels
@@ -63,6 +67,8 @@ import Charts
         self.enableDataZones = enableDataZones
         self.enableCustomMarker = enableCustomMarker
         self.transparentBackground = transparentBackground
+        self.benchmark = benchmark
+        self.isHowdyIndexType = isHowdyIndexType
 
         if data.count > 1 && data.count == labels.count {
             self.setUpChart(data: data, labels: labels)
@@ -123,7 +129,7 @@ import Charts
         self.setHorizontalScroll(labels: labels)
     }
     
-    private func getDataSet(entries: [ChartDataEntry]) -> LineChartDataSet {
+    private func getDataSet(entries: [ChartDataEntry], isBenchmark: Bool = false) -> LineChartDataSet {
         let color = lineColor
         let dataSet: LineChartDataSet = LineChartDataSet(entries: entries, label: "")
         
@@ -136,6 +142,17 @@ import Charts
         dataSet.drawValuesEnabled = false
         dataSet.drawFilledEnabled = false
         dataSet.highlightLineWidth = 0
+        
+        if isBenchmark {
+            dataSet.lineWidth = 1.5
+            dataSet.lineDashLengths = [5,8]
+            dataSet.circleRadius = 0
+            dataSet.circleHoleRadius = 0
+            dataSet.setColor(UIColor.white)
+            dataSet.drawValuesEnabled = false
+            dataSet.drawFilledEnabled = false
+            dataSet.highlightLineWidth = 0
+        }
         
         return dataSet
     }
@@ -178,17 +195,30 @@ import Charts
     }
     
     private func setData(entries: [ChartDataEntry]) {
+        var data: ChartData? = nil
         let dataSet: LineChartDataSet = self.getDataSet(entries: entries)
         
-        let dataSetZones = self.isHowdyScoreType ? getScoreChartDataSetZones(entries: entries) : getChartDataSetZones(entries: entries)
-        let greenZoneDataSet = dataSetZones.green
-        let yellowZoneDataSet = dataSetZones.yellow
-        let redZoneDataSet = dataSetZones.red
+        if self.isHowdyIndexType {
+            let benchmarkDataSet = getBenchmarkDataSet()
+            
+            dataSet.mode = .cubicBezier
+            benchmarkDataSet.mode = .cubicBezier
+
+            let dataSetZones = getChartDataSetHowdyIndexZone(entries: entries)
+            let sets = [dataSetZones, dataSet, benchmarkDataSet]
+            
+            data = LineChartData(dataSets: sets)
+        } else {
+            let dataSetZones = self.isHowdyScoreType ? getScoreChartDataSetZones(entries: entries) : getChartDataSetZones(entries: entries)
+            let greenZoneDataSet = dataSetZones.green
+            let yellowZoneDataSet = dataSetZones.yellow
+            let redZoneDataSet = dataSetZones.red
+            
+            let sets = enableDataZones ? [greenZoneDataSet, yellowZoneDataSet, redZoneDataSet, dataSet] : [dataSet]
+            data = LineChartData(dataSets: sets)
+        }
         
-        let sets = enableDataZones ? [greenZoneDataSet, yellowZoneDataSet, redZoneDataSet, dataSet] : [dataSet]
-        let data = LineChartData(dataSets: sets)
-        
-        data.isHighlightEnabled = enableCustomMarker
+        data!.isHighlightEnabled = enableCustomMarker
         
         chartView.data = data
     }
@@ -198,11 +228,11 @@ import Charts
         xAxis.drawLabelsEnabled = self.hideAxisAndLabels ? false : true
         xAxis.granularity = 1
         xAxis.gridLineWidth = 1.5
-        xAxis.gridColor = WellbeingChartColor.grey
+        xAxis.gridColor = isHowdyIndexType ? UIColor.white : WellbeingChartColor.grey
         xAxis.labelTextColor = WellbeingChartColor.black
         xAxis.labelFont = self.customFont
         xAxis.labelPosition = .bottom
-        xAxis.drawAxisLineEnabled = self.hideAxisAndLabels ? false : true
+        xAxis.drawAxisLineEnabled = self.hideAxisAndLabels || isHowdyIndexType ? false : true
         xAxis.drawGridLinesEnabled = self.hideAxisAndLabels ? false : true
         xAxis.drawGridLinesBehindDataEnabled = false
         xAxis.wordWrapEnabled = true
@@ -277,6 +307,19 @@ import Charts
         
         return (greenZoneDataSet, yellowZoneDataSet, redZoneDataSet)
     }
+
+    private func getChartDataSetHowdyIndexZone(entries: [ChartDataEntry])
+        -> LineChartDataSet {
+        let blueZoneDataSet: LineChartDataSet = self.getZoneDataSet(
+            entries: entries,
+            treshold: 110.0,
+            color: whiteBackground ? UIColor.white : WellbeingChartColor.blue,
+            nextColor: whiteBackground ? UIColor.white : WellbeingChartColor.lightBlue,
+            colorLocations: [1, 0.15, 0.05]
+        )
+            
+        return blueZoneDataSet
+    }
     
     private func getScoreChartDataSetZones(entries: [ChartDataEntry])
         -> (green: LineChartDataSet, yellow: LineChartDataSet, red: LineChartDataSet) {
@@ -305,5 +348,18 @@ import Charts
         )
         
         return (greenZoneDataSet, yellowZoneDataSet, redZoneDataSet)
+    }
+    
+    private func getBenchmarkDataSet() -> LineChartDataSet
+    {
+        var chartDataEntries: [ChartDataEntry] = []
+        
+        for (index, element) in benchmark!.enumerated() {
+            chartDataEntries.append(ChartDataEntry(x: Double(index), y: element))
+        }
+        
+        let dataSet: LineChartDataSet = self.getDataSet(entries: chartDataEntries, isBenchmark: true)
+        
+        return dataSet
     }
 }
