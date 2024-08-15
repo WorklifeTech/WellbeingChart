@@ -253,7 +253,7 @@ import Charts
         -> (green: LineChartDataSet, yellow: LineChartDataSet, red: LineChartDataSet) {
         let greenZoneDataSet: LineChartDataSet = self.getZoneDataSet(
             entries: entries,
-            treshold: 100.0,
+            treshold: 110.0,
             color: whiteBackground ? UIColor.white : WellbeingChartColor.green,
             nextColor: whiteBackground ? UIColor.white : WellbeingChartColor.lightGreen,
             colorLocations: [1.0, 0.75, 0.5]
