@@ -35,6 +35,8 @@ class ViewController: UIViewController {
             90.0
         ]
         
+        let benchmark = data.map { $0 + 15.0 }
+        
         let scores: [Double] = [
             4.0,
             5.0,
@@ -69,6 +71,7 @@ class ViewController: UIViewController {
         
         let isHowdyScoreType = false
         let isInterventionType = false
+        let isHowdyIndexType = false
         let dataset = isHowdyScoreType ? scores : data
         
         var chartView = WellbeingLineChart()
@@ -78,13 +81,15 @@ class ViewController: UIViewController {
                 whiteBackground: false,
                 hideAxisAndLabels: false,
                 isHowdyScoreType: isHowdyScoreType,
-                lineWidth: 1,
-                circleRadius: 1,
+                lineWidth: 1, // isHowdyIndexType 3
+                circleRadius: 1, // isHowdyIndexType 5
                 lineColor: UIColor.black,
-                enableLeftAxis: false,
+                enableLeftAxis: isHowdyIndexType ? true : false,
                 enableDataZones: true,
                 enableCustomMarker: false,
-                transparentBackground: false
+                transparentBackground: false,
+                benchmark: benchmark,
+                isHowdyIndexType: isHowdyIndexType
             )
         
         if isInterventionType {
