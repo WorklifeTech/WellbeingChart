@@ -17,4 +17,7 @@ public struct WellbeingChartColor {
     static let lightRed = UIColor(red: 1, green: 0.5882, blue: 0.498, alpha: 1.0)
     static let black = UIColor(red: 0.1882, green: 0.1882, blue: 0.1882, alpha: 1.0)
     static let grey = UIColor(red: 0.8588, green: 0.8588, blue: 0.8588, alpha: 1.0)
+    static let lightBlue = UIColor(red: 0.87, green: 0.95, blue: 0.98, alpha: 1.00)
+    static let blue = UIColor(red: 0.00, green: 0.67, blue: 0.89, alpha: 1.00)
+
 }
