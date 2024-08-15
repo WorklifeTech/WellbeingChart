@@ -206,7 +206,7 @@ import Charts
         xAxis.drawGridLinesEnabled = self.hideAxisAndLabels ? false : true
         xAxis.drawGridLinesBehindDataEnabled = false
         xAxis.wordWrapEnabled = true
-        xAxis.wordWrapWidthPercent = 0.7
+        xAxis.wordWrapWidthPercent = 0.8
         xAxis.valueFormatter = DefaultAxisValueFormatter(block: {(index, _) in
             return labels[Int(index)]
         })
@@ -226,9 +226,9 @@ import Charts
             leftAxis.axisMinimum = 0
             leftAxis.drawLimitLinesBehindDataEnabled = false
         }
-        
-        chartView.extraRightOffset = 25
-        chartView.extraLeftOffset = 25
+
+        chartView.extraRightOffset = 35
+        chartView.extraLeftOffset = 35
         chartView.extraBottomOffset = 20
         chartView.extraTopOffset = 20
     }
