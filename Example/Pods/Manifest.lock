@@ -5,7 +5,7 @@ PODS:
     - SwiftAlgorithms (~> 1.0)
   - SwiftAlgorithms (1.0.0)
   - TinyConstraints (4.0.1)
-  - WellbeingChart (2.0.3):
+  - WellbeingChart (2.0.7):
     - Charts (~> 4.1.0)
     - TinyConstraints (~> 4.0.1)
 
@@ -23,11 +23,11 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Charts: 354f86803d11d9c35de280587fef50d1af063978
+  Charts: ce0768268078eee0336f122c3c4ca248e4e204c5
   SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
   TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
-  WellbeingChart: 525889dcbe58994c7b18fa32ddf2b9ef1e4a346d
+  WellbeingChart: a7e7261d83b347614f4bb5150f2518e5f8e95022
 
 PODFILE CHECKSUM: 2278d044502598e8aa0e2660b90a1a0242f90b1d
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.15.2
