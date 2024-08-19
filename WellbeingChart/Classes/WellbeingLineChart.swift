@@ -152,6 +152,10 @@ import Charts
             dataSet.drawValuesEnabled = false
             dataSet.drawFilledEnabled = false
             dataSet.highlightLineWidth = 0
+            
+            if whiteBackground {
+                dataSet.setColor(WellbeingChartColor.grey)
+            }
         }
         
         return dataSet
