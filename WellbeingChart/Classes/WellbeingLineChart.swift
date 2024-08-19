@@ -152,6 +152,10 @@ import Charts
             dataSet.drawValuesEnabled = false
             dataSet.drawFilledEnabled = false
             dataSet.highlightLineWidth = 0
+            
+            if whiteBackground {
+                dataSet.setColor(WellbeingChartColor.grey)
+            }
         }
         
         return dataSet
@@ -159,7 +163,7 @@ import Charts
     
     private func getZoneDataSet(
         entries: [ChartDataEntry],
-        treshold: Double,
+        threshold: Double,
         color: NSUIColor,
         nextColor: NSUIColor,
         colorLocations: [CGFloat]
@@ -167,7 +171,7 @@ import Charts
         var zoneData: [ChartDataEntry] = []
         
         for entry in entries {
-            zoneData.append(ChartDataEntry(x: entry.x, y: treshold))
+            zoneData.append(ChartDataEntry(x: entry.x, y: threshold))
         }
         
         let zoneDataSet: LineChartDataSet = LineChartDataSet(entries: zoneData, label: "")
@@ -283,7 +287,7 @@ import Charts
         -> (green: LineChartDataSet, yellow: LineChartDataSet, red: LineChartDataSet) {
         let greenZoneDataSet: LineChartDataSet = self.getZoneDataSet(
             entries: entries,
-            treshold: 110.0,
+            threshold: 110.0,
             color: whiteBackground ? UIColor.white : WellbeingChartColor.green,
             nextColor: whiteBackground ? UIColor.white : WellbeingChartColor.lightGreen,
             colorLocations: [1.0, 0.75, 0.5]
@@ -291,7 +295,7 @@ import Charts
         
         let yellowZoneDataSet: LineChartDataSet = self.getZoneDataSet(
             entries: entries,
-            treshold: 50.0,
+            threshold: 50.0,
             color: whiteBackground ? UIColor.white : WellbeingChartColor.yellow,
             nextColor: whiteBackground ? UIColor.white : WellbeingChartColor.lightYellow,
             colorLocations: [0.5, 0.4, 0.35]
@@ -299,7 +303,7 @@ import Charts
         
         let redZoneDataSet: LineChartDataSet = self.getZoneDataSet(
             entries: entries,
-            treshold: 35.0,
+            threshold: 35.0,
             color: whiteBackground ? UIColor.white : WellbeingChartColor.red,
             nextColor: whiteBackground ? UIColor.white : WellbeingChartColor.lightRed,
             colorLocations: [0.35, 0.2, 0.0]
@@ -312,7 +316,7 @@ import Charts
         -> LineChartDataSet {
         let blueZoneDataSet: LineChartDataSet = self.getZoneDataSet(
             entries: entries,
-            treshold: 110.0,
+            threshold: 110.0,
             color: whiteBackground ? UIColor.white : WellbeingChartColor.blue,
             nextColor: whiteBackground ? UIColor.white : WellbeingChartColor.lightBlue,
             colorLocations: [1, 0.15, 0.05]
@@ -325,7 +329,7 @@ import Charts
         -> (green: LineChartDataSet, yellow: LineChartDataSet, red: LineChartDataSet) {
         let greenZoneDataSet: LineChartDataSet = self.getZoneDataSet(
             entries: entries,
-            treshold: 5.0,
+            threshold: 5.0,
             color: whiteBackground ? UIColor.white : WellbeingChartColor.green,
             nextColor: whiteBackground ? UIColor.white : WellbeingChartColor.lightGreen,
             colorLocations: [1.0, 0.72, 0.52, 0.42]
@@ -333,7 +337,7 @@ import Charts
         
         let yellowZoneDataSet: LineChartDataSet = self.getZoneDataSet(
             entries: entries,
-            treshold: 2.0,
+            threshold: 2.0,
             color: whiteBackground ? UIColor.white : WellbeingChartColor.yellow,
             nextColor: whiteBackground ? UIColor.white : WellbeingChartColor.lightYellow,
             colorLocations: [0.4, 0.3, 0.21]
@@ -341,7 +345,7 @@ import Charts
         
         let redZoneDataSet: LineChartDataSet = self.getZoneDataSet(
             entries: entries,
-            treshold: 1.0,
+            threshold: 1.0,
             color: whiteBackground ? UIColor.white : WellbeingChartColor.red,
             nextColor: whiteBackground ? UIColor.white : WellbeingChartColor.lightRed,
             colorLocations: [0.2, 0.1, 0.0]
