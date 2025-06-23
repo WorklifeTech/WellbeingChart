@@ -115,6 +115,8 @@ class ViewController: UIViewController {
             chartViewContainer.backgroundColor = UIColor.systemCyan
         }
         
+        chartViewContainer.backgroundColor = UIColor.clear
+        
         chartViewContainer.addSubview(chartView)
         chartView.width(to: chartViewContainer)
         chartView.height(245)

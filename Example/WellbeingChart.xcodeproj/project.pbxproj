@@ -217,6 +217,7 @@
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = F2BTY86H9Y;
 						LastSwiftMigration = 1220;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -523,6 +524,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E21CB33734858C46F4E3C9BB /* Pods-WellbeingChart_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = F2BTY86H9Y;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -545,6 +547,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 55E90AF810CBEBE62828F9BB /* Pods-WellbeingChart_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = F2BTY86H9Y;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

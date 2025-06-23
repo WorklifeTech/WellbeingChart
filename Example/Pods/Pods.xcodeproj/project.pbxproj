@@ -34,7 +34,7 @@
 		19F40EB97D44872C2F155EB91889EEDD /* BarChartDataSetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC1A3D596CE2FD2F2B70CF4BA5C68A /* BarChartDataSetProtocol.swift */; };
 		1C7423F964AEF53EA37E1B4F2F4C8A3D /* MoveViewJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63B5A4DDAFC88C553C9CBAAF80CD355 /* MoveViewJob.swift */; };
 		22725F307C8A12F85C2E583CE9D67A68 /* CrossShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FE86F5803E57D2BE97263EB2DECE6E /* CrossShapeRenderer.swift */; };
-		22CD8EFCFB075DA656D723DF77827B1D /* WellbeingChart-Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 3C49191219C22FEAC80AB51DBE81C3B3 /* WellbeingChart-Fonts */; };
+		22CD8EFCFB075DA656D723DF77827B1D /* Fonts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3C49191219C22FEAC80AB51DBE81C3B3 /* Fonts.bundle */; };
 		235C6BC0654C150374C6B533B9D33467 /* TinyConstraints+superview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9822E151712AB1903F9DD233DB033ACD /* TinyConstraints+superview.swift */; };
 		25D7B9CB6D83A2899E364531C8B465E0 /* XAxisRendererRadarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E0A8BAA42269069AA2309397C236B7 /* XAxisRendererRadarChart.swift */; };
 		26414DCD243931AD2DF5A7FAEFA9A2F1 /* AxisBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1692710A79AC9055D2C5164F95CD71 /* AxisBase.swift */; };
@@ -152,6 +152,7 @@
 		B4D7DBBE6B8329E0947FFC9D1721B3CD /* YAxisRendererRadarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D1934D5D4B7BC0F234E8893D0CDD7 /* YAxisRendererRadarChart.swift */; };
 		B6580C63B353D52672121417CD3E4DF9 /* LegendRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2F7BF89DF70FC3AEDDE5523F42ABB6 /* LegendRenderer.swift */; };
 		B709B3F0FD7D89C78DE139C07924760B /* Highlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD848C2DC8AFDF85B600FF0205EABEB /* Highlighter.swift */; };
+		BCBDC4952E05A1FF00DA7146 /* WellbeingLineChartLegend.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDC4942E05A1E700DA7146 /* WellbeingLineChartLegend.swift */; };
 		BDFE5C038BFAEDE5843A3BE7B78DAB9B /* AnimatedViewPortJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D0FBF841195AB1A467DF71936FD75A /* AnimatedViewPortJob.swift */; };
 		BE85BF81DBD61E106AE6168F19DBBF0A /* CandleChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BF8A33F9394F45413DB4BE0433AE83 /* CandleChartData.swift */; };
 		BEE4705FCD33AD7CCB2B1C8C593CE13D /* DataApproximator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F73A14ECC94591F1B49CCB0C853D /* DataApproximator.swift */; };
@@ -302,8 +303,8 @@
 		21569C37E481A9CAB245FF6454B00EA9 /* Trim.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Trim.swift; path = Sources/Algorithms/Trim.swift; sourceTree = "<group>"; };
 		2191F23F74B052636B3EE18A6B922CD1 /* ChartDataEntryBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartDataEntryBase.swift; path = Source/Charts/Data/Implementations/Standard/ChartDataEntryBase.swift; sourceTree = "<group>"; };
 		23F44B10DA92098FE52AC7D3DDE8BF08 /* ChartColorTemplates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartColorTemplates.swift; path = Source/Charts/Utils/ChartColorTemplates.swift; sourceTree = "<group>"; };
-		24578FCD14239E1ACA7C818E7F06F9DE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		248EB203AE249596FFC55952F5590D95 /* TinyConstraints */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TinyConstraints; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24578FCD14239E1ACA7C818E7F06F9DE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		248EB203AE249596FFC55952F5590D95 /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2555CAB16F80C90AF145EC5AE442F3ED /* XAxis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XAxis.swift; path = Source/Charts/Components/XAxis.swift; sourceTree = "<group>"; };
 		2781463BA1E43C64656D6CAF6E94E80E /* RadarHighlighter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarHighlighter.swift; path = Source/Charts/Highlight/RadarHighlighter.swift; sourceTree = "<group>"; };
 		28BF8A33F9394F45413DB4BE0433AE83 /* CandleChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CandleChartData.swift; path = Source/Charts/Data/Implementations/Standard/CandleChartData.swift; sourceTree = "<group>"; };
@@ -320,7 +321,7 @@
 		3435C10967D7C5F3E22288EF1EB84999 /* WellbeingChart-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WellbeingChart-dummy.m"; sourceTree = "<group>"; };
 		35162BCAA32F6793C5B63558D07D8543 /* Pods-WellbeingChart_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WellbeingChart_Example-dummy.m"; sourceTree = "<group>"; };
 		3777D911F30D2918B17ED0678EBD9A4C /* FillFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillFormatter.swift; path = Source/Charts/Formatters/FillFormatter.swift; sourceTree = "<group>"; };
-		3C49191219C22FEAC80AB51DBE81C3B3 /* WellbeingChart-Fonts */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "WellbeingChart-Fonts"; path = Fonts.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C49191219C22FEAC80AB51DBE81C3B3 /* Fonts.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Fonts.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		415731CE1368C5B081C749D7E5205EBD /* LineChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineChartView.swift; path = Source/Charts/Charts/LineChartView.swift; sourceTree = "<group>"; };
 		42DA818ED9B1EF316D91AE6B8F3BCE2A /* YAxisRendererHorizontalBarChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YAxisRendererHorizontalBarChart.swift; path = Source/Charts/Renderers/YAxisRendererHorizontalBarChart.swift; sourceTree = "<group>"; };
 		43814C2D0207C1401B73F5948D4E6522 /* CandleStickChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CandleStickChartRenderer.swift; path = Source/Charts/Renderers/CandleStickChartRenderer.swift; sourceTree = "<group>"; };
@@ -343,7 +344,7 @@
 		52FF918F16F79C166A97F7263B1AE2CA /* PieRadarHighlighter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieRadarHighlighter.swift; path = Source/Charts/Highlight/PieRadarHighlighter.swift; sourceTree = "<group>"; };
 		54FD0FB9F6CA908089EE69BDA0014D06 /* LineRadarChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineRadarChartDataSet.swift; path = Source/Charts/Data/Implementations/Standard/LineRadarChartDataSet.swift; sourceTree = "<group>"; };
 		57AECFBB4F82F7542FF22B42C58115DC /* DefaultAxisValueFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultAxisValueFormatter.swift; path = Source/Charts/Formatters/DefaultAxisValueFormatter.swift; sourceTree = "<group>"; };
-		58FB551C5AF84FFFF9761AD71BEC6640 /* Pods-WellbeingChart_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WellbeingChart_Example"; path = Pods_WellbeingChart_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58FB551C5AF84FFFF9761AD71BEC6640 /* Pods_WellbeingChart_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WellbeingChart_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59974308CF544699ED5C353E099203B7 /* ChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartDataSet.swift; path = Source/Charts/Data/Implementations/Standard/ChartDataSet.swift; sourceTree = "<group>"; };
 		5A062A2D63BF5A9CE0CC3225D28BAD75 /* ChartDataEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartDataEntry.swift; path = Source/Charts/Data/Implementations/Standard/ChartDataEntry.swift; sourceTree = "<group>"; };
 		5B4A3535677C6B1C66EFE3D6EA099CB6 /* ScatterChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterChartRenderer.swift; path = Source/Charts/Renderers/ScatterChartRenderer.swift; sourceTree = "<group>"; };
@@ -361,7 +362,7 @@
 		6B5B5FF8679ACCBED82EF44F1EAA6B45 /* Fill.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fill.swift; path = Source/Charts/Utils/Fill.swift; sourceTree = "<group>"; };
 		6BFB5A73D87692F029FDC193CF21BA68 /* SquareShapeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SquareShapeRenderer.swift; path = Source/Charts/Renderers/Scatter/SquareShapeRenderer.swift; sourceTree = "<group>"; };
 		6CD32A9B52CEDB63712A43CE6D9B5DE0 /* ScatterChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterChartDataSet.swift; path = Source/Charts/Data/Implementations/Standard/ScatterChartDataSet.swift; sourceTree = "<group>"; };
-		6D4C76C2CF39C8FB35F7F1B7B70BBACD /* WellbeingChart.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = WellbeingChart.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6D4C76C2CF39C8FB35F7F1B7B70BBACD /* WellbeingChart.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = WellbeingChart.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6D8511935BD1B4B488DA85BE7AF72CEF /* Pods-WellbeingChart_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WellbeingChart_Example-Info.plist"; sourceTree = "<group>"; };
 		6DBC3394D688F6E760311875E6BBD974 /* ChartDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartDataProvider.swift; path = Source/Charts/Interfaces/ChartDataProvider.swift; sourceTree = "<group>"; };
 		6E66C01EA4DC0570F21FE1AF56378EC6 /* WellbeingChart.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WellbeingChart.modulemap; sourceTree = "<group>"; };
@@ -408,20 +409,20 @@
 		9822E151712AB1903F9DD233DB033ACD /* TinyConstraints+superview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TinyConstraints+superview.swift"; path = "TinyConstraints/Classes/TinyConstraints+superview.swift"; sourceTree = "<group>"; };
 		984EA0D407D4917471CE4C648E3BB606 /* Charts-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Charts-dummy.m"; sourceTree = "<group>"; };
 		9AB5A7A97EBBB75D6884CABCA0BB1D85 /* Charts.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Charts.modulemap; sourceTree = "<group>"; };
-		9B0ECD0379D20855C4D5C362729BDE20 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "Poppins-Regular.ttf"; path = "WellbeingChart/Assets/Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		9B0ECD0379D20855C4D5C362729BDE20 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "WellbeingChart/Assets/Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		9B1B28E9E91C54FEE94D887BB535DD3D /* BarChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarChartDataSet.swift; path = Source/Charts/Data/Implementations/Standard/BarChartDataSet.swift; sourceTree = "<group>"; };
 		9C031AAAF4A76716DB2CB53D123BE76E /* EitherSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EitherSequence.swift; path = Sources/Algorithms/EitherSequence.swift; sourceTree = "<group>"; };
 		9C4804EF3AC9F007B90DF57517CA2953 /* MarkerImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkerImage.swift; path = Source/Charts/Components/MarkerImage.swift; sourceTree = "<group>"; };
 		9CB6C320433BBAB87742463B23B2A0DB /* PieChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieChartDataSet.swift; path = Source/Charts/Data/Implementations/Standard/PieChartDataSet.swift; sourceTree = "<group>"; };
 		9D08E4C1F0B7F11F6B176F8F626D723E /* Legend.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Legend.swift; path = Source/Charts/Components/Legend.swift; sourceTree = "<group>"; };
 		9D848B8BC24DC67F3C6A1AF6E58DE2A0 /* YAxisRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YAxisRenderer.swift; path = Source/Charts/Renderers/YAxisRenderer.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DBA1F7D7A3CE7399C998A2D1AAA163B /* ScatterChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterChartData.swift; path = Source/Charts/Data/Implementations/Standard/ScatterChartData.swift; sourceTree = "<group>"; };
 		9E32381345C31FFDC46F46B2882F19E9 /* Permutations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Permutations.swift; path = Sources/Algorithms/Permutations.swift; sourceTree = "<group>"; };
 		9EABCC3BBB55BA08DDDEA6ACD6F74466 /* FirstNonNil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FirstNonNil.swift; path = Sources/Algorithms/FirstNonNil.swift; sourceTree = "<group>"; };
 		9EF41852B95F885B3E02F658E2E2C9F5 /* BarLineScatterCandleBubbleChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarLineScatterCandleBubbleChartData.swift; path = Source/Charts/Data/Implementations/Standard/BarLineScatterCandleBubbleChartData.swift; sourceTree = "<group>"; };
 		9F54783CE4260E214D85E1062269E853 /* Charts-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Charts-umbrella.h"; sourceTree = "<group>"; };
-		A1C1B977ED8804E8AEEC884E7359EE58 /* Charts */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Charts; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1C1B977ED8804E8AEEC884E7359EE58 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2E16A3B3EBEC7FB94063E13842DBAA0 /* HorizontalBarChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HorizontalBarChartRenderer.swift; path = Source/Charts/Renderers/HorizontalBarChartRenderer.swift; sourceTree = "<group>"; };
 		A2F42BE58C98B8DABC36656A5DC87805 /* MinMax.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MinMax.swift; path = Sources/Algorithms/MinMax.swift; sourceTree = "<group>"; };
 		A4DE161FB0533EC3385857276D89AAE4 /* CandleStickChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CandleStickChartView.swift; path = Source/Charts/Charts/CandleStickChartView.swift; sourceTree = "<group>"; };
@@ -429,7 +430,7 @@
 		A873F0C40F2401FF35C93F354D67B97D /* Pods-WellbeingChart_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WellbeingChart_Example.modulemap"; sourceTree = "<group>"; };
 		AB5BD73C612D1608601C085F5029915B /* CombinedChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombinedChartData.swift; path = Source/Charts/Data/Implementations/Standard/CombinedChartData.swift; sourceTree = "<group>"; };
 		ACB51B9BCCB8EE11E913C25C1C00FA25 /* SwiftAlgorithms-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftAlgorithms-umbrella.h"; sourceTree = "<group>"; };
-		ADD225A881E024C7D5C360A9527AD6B6 /* Pods-WellbeingChart_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WellbeingChart_Tests"; path = Pods_WellbeingChart_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADD225A881E024C7D5C360A9527AD6B6 /* Pods_WellbeingChart_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WellbeingChart_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADDC1A3D596CE2FD2F2B70CF4BA5C68A /* BarChartDataSetProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarChartDataSetProtocol.swift; path = Source/Charts/Data/Interfaces/BarChartDataSetProtocol.swift; sourceTree = "<group>"; };
 		B07CEA62189CF1CFE8ABB256EA640DBE /* LineScatterCandleRadarChartDataSetProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineScatterCandleRadarChartDataSetProtocol.swift; path = Source/Charts/Data/Interfaces/LineScatterCandleRadarChartDataSetProtocol.swift; sourceTree = "<group>"; };
 		B0D573C7C9BD2F5D009C216C96B57FA4 /* ValueFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueFormatter.swift; path = Source/Charts/Formatters/ValueFormatter.swift; sourceTree = "<group>"; };
@@ -449,7 +450,8 @@
 		B9D0FBF841195AB1A467DF71936FD75A /* AnimatedViewPortJob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedViewPortJob.swift; path = Source/Charts/Jobs/AnimatedViewPortJob.swift; sourceTree = "<group>"; };
 		BA6BA01A424F94835F70ADA0980F9031 /* SwiftAlgorithms-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftAlgorithms-prefix.pch"; sourceTree = "<group>"; };
 		BAF8937021FC8552FEC6B02C9CCEBD4A /* Platform+Color.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Platform+Color.swift"; path = "Source/Charts/Utils/Platform+Color.swift"; sourceTree = "<group>"; };
-		BC2064E05FC67021E470729B8D75EBBF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		BC2064E05FC67021E470729B8D75EBBF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		BCBDC4942E05A1E700DA7146 /* WellbeingLineChartLegend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WellbeingLineChartLegend.swift; path = WellbeingChart/Classes/WellbeingLineChartLegend.swift; sourceTree = "<group>"; };
 		BD0A0264A0545573D59BEF84683C6F55 /* TinyConstraints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyConstraints.debug.xcconfig; sourceTree = "<group>"; };
 		C1A27D41B018F9F4A45A34E87F88D7C6 /* HorizontalBarChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HorizontalBarChartView.swift; path = Source/Charts/Charts/HorizontalBarChartView.swift; sourceTree = "<group>"; };
 		C1E0A8BAA42269069AA2309397C236B7 /* XAxisRendererRadarChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XAxisRendererRadarChart.swift; path = Source/Charts/Renderers/XAxisRendererRadarChart.swift; sourceTree = "<group>"; };
@@ -499,11 +501,11 @@
 		F239FDFD3766F10DCAF6B93BF0CFB7E2 /* XAxisRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XAxisRenderer.swift; path = Source/Charts/Renderers/XAxisRenderer.swift; sourceTree = "<group>"; };
 		F23BDB8AF30D7327B42B4EB7CE2B9BFE /* ScatterChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterChartView.swift; path = Source/Charts/Charts/ScatterChartView.swift; sourceTree = "<group>"; };
 		F370CB25F09AC8209CA31ED5006CD400 /* BubbleChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BubbleChartRenderer.swift; path = Source/Charts/Renderers/BubbleChartRenderer.swift; sourceTree = "<group>"; };
-		F3E7458F7D38C89A9DE4BBACD3450C88 /* SwiftAlgorithms */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftAlgorithms; path = Algorithms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3E7458F7D38C89A9DE4BBACD3450C88 /* Algorithms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Algorithms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46CD717F8ACED0798BEA087BF47AF7D /* RadarChartDataSetProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarChartDataSetProtocol.swift; path = Source/Charts/Data/Interfaces/RadarChartDataSetProtocol.swift; sourceTree = "<group>"; };
 		F54578BCC7836D2CC8DE130E3E16EDDF /* ViewPortHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewPortHandler.swift; path = Source/Charts/Utils/ViewPortHandler.swift; sourceTree = "<group>"; };
 		F6A468FF037769E682FBDB73BA655DF8 /* BarChartDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarChartDataProvider.swift; path = Source/Charts/Interfaces/BarChartDataProvider.swift; sourceTree = "<group>"; };
-		F73619AEF526B73FE2ABE951BEDF52AC /* WellbeingChart */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WellbeingChart; path = WellbeingChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F73619AEF526B73FE2ABE951BEDF52AC /* WellbeingChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WellbeingChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7388B0D38F58855906CD887691CD8C2 /* TinyConstraints.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TinyConstraints.modulemap; sourceTree = "<group>"; };
 		FD2346962E87E125D07A432588975FA3 /* CircleShapeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircleShapeRenderer.swift; path = Source/Charts/Renderers/Scatter/CircleShapeRenderer.swift; sourceTree = "<group>"; };
 		FFD6BA478C7FCBDB343AAED9B0F0CA59 /* Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animator.swift; path = Source/Charts/Animation/Animator.swift; sourceTree = "<group>"; };
@@ -607,7 +609,6 @@
 				6B29933CEFDDF9E2D20455DBA7A0D482 /* Core */,
 				77C361896C13C78FE5396D29D16A40A5 /* Support Files */,
 			);
-			name = Charts;
 			path = Charts;
 			sourceTree = "<group>";
 		};
@@ -845,7 +846,6 @@
 				B7ACA92DBD8B9AA1D5A02C19967A066D /* Windows.swift */,
 				5FC5EC4639C3A62FD86EBE2DBFFCCFC1 /* Support Files */,
 			);
-			name = SwiftAlgorithms;
 			path = SwiftAlgorithms;
 			sourceTree = "<group>";
 		};
@@ -885,20 +885,19 @@
 				910961C8B16AA0F00E8A57B188A7156A /* TinyEdgeInsets.swift */,
 				C6E9FE2267628C1FB44BD42AD1D0C1DA /* Support Files */,
 			);
-			name = TinyConstraints;
 			path = TinyConstraints;
 			sourceTree = "<group>";
 		};
 		C2BF892462900724AA79B279775700FF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A1C1B977ED8804E8AEEC884E7359EE58 /* Charts */,
-				58FB551C5AF84FFFF9761AD71BEC6640 /* Pods-WellbeingChart_Example */,
-				ADD225A881E024C7D5C360A9527AD6B6 /* Pods-WellbeingChart_Tests */,
-				F3E7458F7D38C89A9DE4BBACD3450C88 /* SwiftAlgorithms */,
-				248EB203AE249596FFC55952F5590D95 /* TinyConstraints */,
-				F73619AEF526B73FE2ABE951BEDF52AC /* WellbeingChart */,
-				3C49191219C22FEAC80AB51DBE81C3B3 /* WellbeingChart-Fonts */,
+				A1C1B977ED8804E8AEEC884E7359EE58 /* Charts.framework */,
+				58FB551C5AF84FFFF9761AD71BEC6640 /* Pods_WellbeingChart_Example.framework */,
+				ADD225A881E024C7D5C360A9527AD6B6 /* Pods_WellbeingChart_Tests.framework */,
+				F3E7458F7D38C89A9DE4BBACD3450C88 /* Algorithms.framework */,
+				248EB203AE249596FFC55952F5590D95 /* TinyConstraints.framework */,
+				F73619AEF526B73FE2ABE951BEDF52AC /* WellbeingChart.framework */,
+				3C49191219C22FEAC80AB51DBE81C3B3 /* Fonts.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -956,6 +955,7 @@
 				4452A88C0F5FD2B1951CAE32E5195D01 /* WellbeingChartFont.swift */,
 				C587D65CF9235578BB0392DF988BAFC0 /* WellbeingLineChart.swift */,
 				D75C88DED1C70028571EF4CEFF6995D2 /* WellbeingLineChartMarker.swift */,
+				BCBDC4942E05A1E700DA7146 /* WellbeingLineChartLegend.swift */,
 				63C240FF4F935636487C68C7FE13B101 /* Pod */,
 				7DAEE853AE223CD24616BE403C99147B /* Support Files */,
 			);
@@ -1031,7 +1031,7 @@
 			);
 			name = "WellbeingChart-Fonts";
 			productName = Fonts;
-			productReference = 3C49191219C22FEAC80AB51DBE81C3B3 /* WellbeingChart-Fonts */;
+			productReference = 3C49191219C22FEAC80AB51DBE81C3B3 /* Fonts.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		09589B3D15BF6EEEBDF89AE803C99BB4 /* Pods-WellbeingChart_Tests */ = {
@@ -1050,7 +1050,7 @@
 			);
 			name = "Pods-WellbeingChart_Tests";
 			productName = Pods_WellbeingChart_Tests;
-			productReference = ADD225A881E024C7D5C360A9527AD6B6 /* Pods-WellbeingChart_Tests */;
+			productReference = ADD225A881E024C7D5C360A9527AD6B6 /* Pods_WellbeingChart_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2C511EE63C6E7D5843B971D1E441119E /* SwiftAlgorithms */ = {
@@ -1068,7 +1068,7 @@
 			);
 			name = SwiftAlgorithms;
 			productName = Algorithms;
-			productReference = F3E7458F7D38C89A9DE4BBACD3450C88 /* SwiftAlgorithms */;
+			productReference = F3E7458F7D38C89A9DE4BBACD3450C88 /* Algorithms.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		35B908E089B95D52DDFBD4B4099EBFCD /* Pods-WellbeingChart_Example */ = {
@@ -1090,7 +1090,7 @@
 			);
 			name = "Pods-WellbeingChart_Example";
 			productName = Pods_WellbeingChart_Example;
-			productReference = 58FB551C5AF84FFFF9761AD71BEC6640 /* Pods-WellbeingChart_Example */;
+			productReference = 58FB551C5AF84FFFF9761AD71BEC6640 /* Pods_WellbeingChart_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		45C4E325E7851DD54CC3AD44C7A71935 /* TinyConstraints */ = {
@@ -1108,7 +1108,7 @@
 			);
 			name = TinyConstraints;
 			productName = TinyConstraints;
-			productReference = 248EB203AE249596FFC55952F5590D95 /* TinyConstraints */;
+			productReference = 248EB203AE249596FFC55952F5590D95 /* TinyConstraints.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		BF03B0B2B8B052092CB5F90CC5FB3757 /* Charts */ = {
@@ -1127,7 +1127,7 @@
 			);
 			name = Charts;
 			productName = Charts;
-			productReference = A1C1B977ED8804E8AEEC884E7359EE58 /* Charts */;
+			productReference = A1C1B977ED8804E8AEEC884E7359EE58 /* Charts.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C2E554D33719165516ACDB3D4C443418 /* WellbeingChart */ = {
@@ -1148,7 +1148,7 @@
 			);
 			name = WellbeingChart;
 			productName = WellbeingChart;
-			productReference = F73619AEF526B73FE2ABE951BEDF52AC /* WellbeingChart */;
+			productReference = F73619AEF526B73FE2ABE951BEDF52AC /* WellbeingChart.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1189,7 +1189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22CD8EFCFB075DA656D723DF77827B1D /* WellbeingChart-Fonts in Resources */,
+				22CD8EFCFB075DA656D723DF77827B1D /* Fonts.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1412,6 +1412,7 @@
 				0756929D3068BC218B4BD6D3C1ABEE76 /* WellbeingChartFont.swift in Sources */,
 				8C332F7730A7627462617A73B1995D18 /* WellbeingLineChart.swift in Sources */,
 				5C52009CCB97F814256046C8BFBA5591 /* WellbeingLineChartMarker.swift in Sources */,
+				BCBDC4952E05A1FF00DA7146 /* WellbeingLineChartLegend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1785,8 +1786,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

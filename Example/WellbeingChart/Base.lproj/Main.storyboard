@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,8 +20,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="tfI-0U-psU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ElB-QL-cZa">
-                                <rect key="frame" x="16" y="50" width="343" height="245"/>
+                                <rect key="frame" x="16" y="70" width="343" height="245"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="245" id="NIp-I0-6xR"/>
@@ -31,7 +34,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ElB-QL-cZa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="0uG-9T-tBh"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="tfI-0U-psU" secondAttribute="bottom" id="ENU-Ux-gVN"/>
+                            <constraint firstItem="tfI-0U-psU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="XkH-bm-PZ1"/>
                             <constraint firstItem="ElB-QL-cZa" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="l8b-D9-Eqr"/>
+                            <constraint firstAttribute="trailing" secondItem="tfI-0U-psU" secondAttribute="trailing" id="n9J-Yl-hOA"/>
+                            <constraint firstItem="tfI-0U-psU" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="pTm-mR-jtU"/>
                             <constraint firstItem="ElB-QL-cZa" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="vt5-1B-QIm"/>
                         </constraints>
                     </view>
@@ -46,6 +53,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="image" width="394" height="853"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
