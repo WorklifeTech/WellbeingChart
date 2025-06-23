@@ -23,6 +23,7 @@ import Charts
     @objc public var lineColor = WellbeingChartColor.black
     @objc public var benchmark: [Double]? = nil
     @objc public var gradientBackground = false
+    @objc public var enableCustomLegend = false
     
     var customFont: UIFont = .systemFont(ofSize: 12.0)
     
@@ -58,6 +59,7 @@ import Charts
         benchmark: [Double]? = nil,
         isHowdyIndexType: Bool = false,
         gradientBackground: Bool = false,
+        enableCustomLegend: Bool = false
     ) -> LineChartView {
         self.whiteBackground = whiteBackground
         self.hideAxisAndLabels = hideAxisAndLabels
@@ -72,6 +74,7 @@ import Charts
         self.benchmark = benchmark
         self.isHowdyIndexType = isHowdyIndexType
         self.gradientBackground = gradientBackground
+        self.enableCustomLegend = enableCustomLegend
 
         if data.count > 1 && data.count == labels.count {
             self.setUpChart(data: data, labels: labels)
@@ -279,6 +282,19 @@ import Charts
         chartView.extraLeftOffset = 0
         chartView.extraBottomOffset = 20
         chartView.extraTopOffset = 20
+        
+        if enableCustomLegend {
+            let gradientView = WellbeingLineChartLegend(frame: CGRect(x: 0, y: 0, width: 10, height: 100))
+            gradientView.translatesAutoresizingMaskIntoConstraints = false
+            chartView.addSubview(gradientView)
+
+            NSLayoutConstraint.activate([
+                gradientView.leadingAnchor.constraint(equalTo: chartView.trailingAnchor, constant: -35),
+                gradientView.topAnchor.constraint(equalTo: chartView.topAnchor, constant: 20),
+                gradientView.bottomAnchor.constraint(equalTo: chartView.bottomAnchor, constant: -41),
+                gradientView.widthAnchor.constraint(equalToConstant: 10)
+            ])
+        }
     }
     
     private func setHorizontalScroll(labels: [String]) {
