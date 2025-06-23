@@ -249,7 +249,7 @@ import Charts
         xAxis.drawLabelsEnabled = self.hideAxisAndLabels ? false : true
         xAxis.granularity = 1
         xAxis.gridLineWidth = 1.5
-        xAxis.gridColor = self.lineColor === UIColor.white ? UIColor.white.withAlphaComponent(0.2) : WellbeingChartColor.grey
+        xAxis.gridColor = self.lineColor == UIColor.white ? UIColor.white.withAlphaComponent(0.2) : WellbeingChartColor.grey
         xAxis.labelTextColor = self.lineColor
         xAxis.labelFont = self.customFont
         xAxis.labelPosition = .bottom
@@ -279,7 +279,7 @@ import Charts
         }
 
         chartView.extraRightOffset = 35
-        chartView.extraLeftOffset = 0
+        chartView.extraLeftOffset = 20
         chartView.extraBottomOffset = 20
         chartView.extraTopOffset = 20
         
