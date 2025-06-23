@@ -246,8 +246,8 @@ import Charts
         xAxis.drawLabelsEnabled = self.hideAxisAndLabels ? false : true
         xAxis.granularity = 1
         xAxis.gridLineWidth = 1.5
-        xAxis.gridColor = isHowdyIndexType ? UIColor.white : WellbeingChartColor.grey
-        xAxis.labelTextColor = WellbeingChartColor.black
+        xAxis.gridColor = self.lineColor === UIColor.white ? UIColor.white.withAlphaComponent(0.2) : WellbeingChartColor.grey
+        xAxis.labelTextColor = self.lineColor
         xAxis.labelFont = self.customFont
         xAxis.labelPosition = .bottom
         xAxis.drawAxisLineEnabled = self.hideAxisAndLabels || isHowdyIndexType ? false : true
