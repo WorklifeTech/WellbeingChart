@@ -22,6 +22,8 @@ import Charts
     @objc public var transparentBackground = false
     @objc public var lineColor = WellbeingChartColor.black
     @objc public var benchmark: [Double]? = nil
+    @objc public var gradientBackground = false
+    @objc public var enableCustomLegend = false
     
     var customFont: UIFont = .systemFont(ofSize: 12.0)
     
@@ -55,7 +57,9 @@ import Charts
         enableCustomMarker: Bool = false,
         transparentBackground: Bool = false,
         benchmark: [Double]? = nil,
-        isHowdyIndexType: Bool = false
+        isHowdyIndexType: Bool = false,
+        gradientBackground: Bool = false,
+        enableCustomLegend: Bool = false
     ) -> LineChartView {
         self.whiteBackground = whiteBackground
         self.hideAxisAndLabels = hideAxisAndLabels
@@ -69,6 +73,8 @@ import Charts
         self.transparentBackground = transparentBackground
         self.benchmark = benchmark
         self.isHowdyIndexType = isHowdyIndexType
+        self.gradientBackground = gradientBackground
+        self.enableCustomLegend = enableCustomLegend
 
         if data.count > 1 && data.count == labels.count {
             self.setUpChart(data: data, labels: labels)
@@ -193,7 +199,18 @@ import Charts
             zoneDataSet.setColor(color);
             zoneDataSet.fill = LinearGradientFill(gradient: gradient!, angle: 90.0)
         }
-
+        
+        if !transparentBackground && gradientBackground {
+            let color1 = UIColor(red: 13/255.0, green: 48/255.0, blue: 83/255.0, alpha: 0.6).cgColor
+            let color2 = UIColor(red: 13/255.0, green: 48/255.0, blue: 83/255.0, alpha: 0.0).cgColor
+            let gradientColors2 = [color1, color2] as CFArray
+            let locations: [CGFloat] = [0.8623, 1]
+            
+            let gradient2 = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors2, locations: locations)
+            
+            zoneDataSet.drawFilledEnabled = true
+            zoneDataSet.fill = LinearGradientFill(gradient: gradient2!, angle: 90.0)
+        }
         
         return zoneDataSet
     }
@@ -218,7 +235,7 @@ import Charts
             let yellowZoneDataSet = dataSetZones.yellow
             let redZoneDataSet = dataSetZones.red
             
-            let sets = enableDataZones ? [greenZoneDataSet, yellowZoneDataSet, redZoneDataSet, dataSet] : [dataSet]
+            let sets = enableDataZones ? gradientBackground ? [greenZoneDataSet, dataSet] : [greenZoneDataSet, yellowZoneDataSet, redZoneDataSet, dataSet] : [dataSet]
             data = LineChartData(dataSets: sets)
         }
         
@@ -232,8 +249,8 @@ import Charts
         xAxis.drawLabelsEnabled = self.hideAxisAndLabels ? false : true
         xAxis.granularity = 1
         xAxis.gridLineWidth = 1.5
-        xAxis.gridColor = isHowdyIndexType ? UIColor.white : WellbeingChartColor.grey
-        xAxis.labelTextColor = WellbeingChartColor.black
+        xAxis.gridColor = self.lineColor === UIColor.white ? UIColor.white.withAlphaComponent(0.2) : WellbeingChartColor.grey
+        xAxis.labelTextColor = self.lineColor
         xAxis.labelFont = self.customFont
         xAxis.labelPosition = .bottom
         xAxis.drawAxisLineEnabled = self.hideAxisAndLabels || isHowdyIndexType ? false : true
@@ -262,9 +279,22 @@ import Charts
         }
 
         chartView.extraRightOffset = 35
-        chartView.extraLeftOffset = 35
+        chartView.extraLeftOffset = 0
         chartView.extraBottomOffset = 20
         chartView.extraTopOffset = 20
+        
+        if enableCustomLegend {
+            let gradientView = WellbeingLineChartLegend(frame: CGRect(x: 0, y: 0, width: 10, height: 100))
+            gradientView.translatesAutoresizingMaskIntoConstraints = false
+            chartView.addSubview(gradientView)
+
+            NSLayoutConstraint.activate([
+                gradientView.leadingAnchor.constraint(equalTo: chartView.trailingAnchor, constant: -35),
+                gradientView.topAnchor.constraint(equalTo: chartView.topAnchor, constant: 20),
+                gradientView.bottomAnchor.constraint(equalTo: chartView.bottomAnchor, constant: -41),
+                gradientView.widthAnchor.constraint(equalToConstant: 10)
+            ])
+        }
     }
     
     private func setHorizontalScroll(labels: [String]) {

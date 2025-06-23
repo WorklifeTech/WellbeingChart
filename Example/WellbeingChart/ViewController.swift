@@ -73,6 +73,8 @@ class ViewController: UIViewController {
         let isInterventionType = false
         let isHowdyIndexType = false
         let dataset = isHowdyScoreType ? scores : data
+        let gradientBackground = false
+        let enableChartLegend = false
         
         var chartView = WellbeingLineChart()
             .getChart(
@@ -84,12 +86,14 @@ class ViewController: UIViewController {
                 lineWidth: 1, // isHowdyIndexType 3
                 circleRadius: 1, // isHowdyIndexType 5
                 lineColor: UIColor.black,
-                enableLeftAxis: isHowdyIndexType ? true : false,
+                enableLeftAxis: isHowdyIndexType,
                 enableDataZones: true,
                 enableCustomMarker: false,
                 transparentBackground: false,
                 benchmark: benchmark,
-                isHowdyIndexType: isHowdyIndexType
+                isHowdyIndexType: isHowdyIndexType,
+                gradientBackground: gradientBackground,
+                enableCustomLegend: enableChartLegend
             )
         
         if isInterventionType {
@@ -106,7 +110,9 @@ class ViewController: UIViewController {
                     enableLeftAxis: true,
                     enableDataZones: false,
                     enableCustomMarker: true,
-                    transparentBackground: true
+                    transparentBackground: true,
+                    gradientBackground: gradientBackground,
+                    enableCustomLegend: enableChartLegend
                 )
         }
         
@@ -114,6 +120,8 @@ class ViewController: UIViewController {
             containerView.backgroundColor = UIColor.systemCyan
             chartViewContainer.backgroundColor = UIColor.systemCyan
         }
+        
+        chartViewContainer.backgroundColor = UIColor.clear
         
         chartViewContainer.addSubview(chartView)
         chartView.width(to: chartViewContainer)
