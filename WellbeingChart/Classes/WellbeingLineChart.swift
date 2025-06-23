@@ -22,6 +22,7 @@ import Charts
     @objc public var transparentBackground = false
     @objc public var lineColor = WellbeingChartColor.black
     @objc public var benchmark: [Double]? = nil
+    @objc public var gradientBackground = false
     
     var customFont: UIFont = .systemFont(ofSize: 12.0)
     
@@ -55,7 +56,8 @@ import Charts
         enableCustomMarker: Bool = false,
         transparentBackground: Bool = false,
         benchmark: [Double]? = nil,
-        isHowdyIndexType: Bool = false
+        isHowdyIndexType: Bool = false,
+        gradientBackground: Bool = false,
     ) -> LineChartView {
         self.whiteBackground = whiteBackground
         self.hideAxisAndLabels = hideAxisAndLabels
@@ -69,6 +71,7 @@ import Charts
         self.transparentBackground = transparentBackground
         self.benchmark = benchmark
         self.isHowdyIndexType = isHowdyIndexType
+        self.gradientBackground = gradientBackground
 
         if data.count > 1 && data.count == labels.count {
             self.setUpChart(data: data, labels: labels)
@@ -193,7 +196,18 @@ import Charts
             zoneDataSet.setColor(color);
             zoneDataSet.fill = LinearGradientFill(gradient: gradient!, angle: 90.0)
         }
-
+        
+        if !transparentBackground && gradientBackground {
+            let color1 = UIColor(red: 13/255.0, green: 48/255.0, blue: 83/255.0, alpha: 0.6).cgColor
+            let color2 = UIColor(red: 13/255.0, green: 48/255.0, blue: 83/255.0, alpha: 0.0).cgColor
+            let gradientColors2 = [color1, color2] as CFArray
+            let locations: [CGFloat] = [0.8623, 1]
+            
+            let gradient2 = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors2, locations: locations)
+            
+            zoneDataSet.drawFilledEnabled = true
+            zoneDataSet.fill = LinearGradientFill(gradient: gradient2!, angle: 90.0)
+        }
         
         return zoneDataSet
     }
@@ -218,7 +232,7 @@ import Charts
             let yellowZoneDataSet = dataSetZones.yellow
             let redZoneDataSet = dataSetZones.red
             
-            let sets = enableDataZones ? [greenZoneDataSet, yellowZoneDataSet, redZoneDataSet, dataSet] : [dataSet]
+            let sets = enableDataZones ? gradientBackground ? [greenZoneDataSet, dataSet] : [greenZoneDataSet, yellowZoneDataSet, redZoneDataSet, dataSet] : [dataSet]
             data = LineChartData(dataSets: sets)
         }
         
@@ -262,7 +276,7 @@ import Charts
         }
 
         chartView.extraRightOffset = 35
-        chartView.extraLeftOffset = 35
+        chartView.extraLeftOffset = 0
         chartView.extraBottomOffset = 20
         chartView.extraTopOffset = 20
     }
