@@ -278,7 +278,7 @@ import Charts
             leftAxis.drawLimitLinesBehindDataEnabled = false
         }
 
-        chartView.setViewPortOffsets(left: 20, top: 0, right: 20, bottom: 40)
+        chartView.setViewPortOffsets(left: 20, top: 5, right: 20, bottom: 40)
         
         if enableCustomLegend {
             let gradientView = WellbeingLineChartLegend(frame: CGRect(x: 0, y: 0, width: 10, height: 100))
